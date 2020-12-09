@@ -1,3 +1,3 @@
 # Webgalerie
-Frontend practice project
+Frontend practice project,
 Webgallery website built with HTML, CSS and JS.
