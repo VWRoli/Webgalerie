@@ -1,3 +1,3 @@
 # Website projects
 Frontend practice projects,
-Website built with HTML, CSS and JS.
+Websites built with HTML, CSS and JS.
