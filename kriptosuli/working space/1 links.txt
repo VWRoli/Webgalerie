@@ -1,0 +1,38 @@
+<a href="https://www.ledgerwallet.com/r/f477" target="blank">Ledger Nano S</a>
+<a href="https://shop.trezor.io?a=UzsJgRzV9i9a" target="blank">TREZOR</a>
+
+<a href="https://copay.io/" target="blank">Copay</a>
+<a href="https://jaxx.io/" target="blank">Jaxx</a>
+<a href="https://www.exodus.io/" target="blank">Exodus</a>
+
+<a href="https://www.coinbase.com/join/5a25568689b1720139045d38" target="_blank">Coinbase</a>
+<a href="https://www.bitpanda.com/?ref=7538236962718457053" target="_blank">BitPanda</a>
+<a href="https://www.binance.com/?ref=13372192" target="_blank">Binance</a>
+<a href="https://www.bitfinex.com/" target="_blank">Bitfinex</a>
+<a href="https://bittrex.com/" target="_blank">Bittrex</a>
+<a href="https://poloniex.com/" target="_blank">Poloniex</a>
+<a href="https://kriptosuli.eu/binance-bitfinex.html">Binance és Bitfinex</a>
+
+<a href="https://kriptosuli.eu/ethereum.html">Ethereum</a>
+<a href="litecoin.html">Litecoin</a>
+<a href="ripple.html">Ripple</a>
+<a href="https://kriptosuli.eu/bitcoin.html">Bitcoin</a>
+<a href="https://kriptosuli.eu/blockchain.html">blokklánc</a>
+<a href="https://kriptosuli.eu/cryptocurrency.html">kriptopénz</a>
+<a href="https://kriptosuli.eu/ico.html">ICO</a>
+<a href="https://kriptosuli.eu/pow-pos.html">Proof of Work</a>
+<a href="https://kriptosuli.eu/segwit.html">SegWit</a>
+
+PLAN:
+bitcoin security
+cloud mining
+adózás
+computer security
+ico red flags
+cryptokitties
+light vs full node wallet
+founders of cryptos
+volatility
+bubble
+4 Common lies Bitcoin and Crypto sceptics tell themselves
+nyílt forráskód /d
