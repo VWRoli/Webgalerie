@@ -129,21 +129,6 @@ footer a,
 }
 
 /* ----- PICTURES -----*/
-.pictures h1 {
-  text-align: left;
-  font-size: 1.5rem;
-  margin: 1rem;
-}
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1.5rem;
-  grid-auto-rows: 100px;
-  margin-bottom: 2rem;
-}
-.img {
-  border: 1px solid red;
-}
 
 /* ----- MEDIA QUERIES -----*/
 @media (max-width: 768px) {
