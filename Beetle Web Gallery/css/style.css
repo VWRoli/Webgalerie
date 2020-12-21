@@ -9,7 +9,7 @@
   --light-color: #f5f6f8;
 }
 
-/* ----- UTILITIES -----*/
+/*? ----- UTILITIES -----*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -21,6 +21,7 @@
 a {
   text-decoration: none;
 }
+
 .btn-primary,
 .btn-secondary {
   color: var(--light-color);
@@ -46,7 +47,7 @@ a {
   text-align: center;
 }
 
-/* ----- NAV & FOOTER -----*/
+/*? ----- NAV & FOOTER -----*/
 
 nav,
 footer {
@@ -97,7 +98,7 @@ footer a,
   margin: 0.5rem;
 }
 
-/* ----- SHOWCASE -----*/
+/*? ----- SHOWCASE -----*/
 #showcase {
   background: url(../images/showcase-bg.jpg) no-repeat top/cover;
   height: 100vh;
@@ -128,9 +129,34 @@ footer a,
   border-radius: 5px;
 }
 
-/* ----- PICTURES -----*/
+/*? ----- PICTURES -----*/
+.gallery-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 10rem;
+  grid-gap: 1rem;
+  grid-auto-flow: dense; /*fills the holes in the grid system automatically*/
+}
 
-/* ----- MEDIA QUERIES -----*/
+.gallery-item {
+  width: 100%;
+  height: 100%;
+}
+.gallery-item .image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.gallery-item .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%; /*Focal point will be the center of the image*/
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+/*? ----- MEDIA QUERIES -----*/
 @media (max-width: 768px) {
   .footer {
     flex-direction: column;
