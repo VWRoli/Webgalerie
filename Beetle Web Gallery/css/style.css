@@ -141,6 +141,7 @@ footer a,
 .gallery-item {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 .gallery-item .image {
   width: 100%;
@@ -154,6 +155,22 @@ footer a,
   object-position: 50% 50%; /*Focal point will be the center of the image*/
   cursor: pointer;
   transition: 0.5s ease-in-out;
+}
+.gallery-item .user {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+  color: var(--light-color);
+}
+.gallery-item .user p {
+  font-weight: 100;
+  font-size: 0.8rem;
 }
 
 /*? ----- MEDIA QUERIES -----*/
