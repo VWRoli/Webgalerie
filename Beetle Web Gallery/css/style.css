@@ -144,7 +144,7 @@ footer a,
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 10rem;
   grid-gap: 1rem;
-  //grid-auto-flow: dense; /*fills the holes in the grid system automatically*/
+  grid-auto-flow: dense; /*fills the holes in the grid system automatically*/
 }
 
 .gallery-item {
@@ -170,21 +170,30 @@ footer a,
   left: 50%;
   transform: translate(-50%, 0);
   width: 100%;
-  display: flex;
+  display: none;
   justify-content: space-between;
   padding: 0 1rem;
   color: var(--light-color);
-  padding-top: 2rem;
+  padding-top: 3rem;
+  padding-bottom: 0.5rem;
   background: rgb(255, 255, 255, 0);
   transition: all 0.5s;
 }
 .gallery-item:hover .user {
   background: linear-gradient(rgb(255, 255, 255, 0), rgb(0, 0, 0, 0.5));
+  display: flex;
 }
 .gallery-item .user a {
   font-weight: 100;
   font-size: 0.8rem;
   color: var(--light-color);
+}
+.gallery-item .user i {
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.fav-scale {
+  transform: scale(1.5);
 }
 
 /*? Span columns*/
