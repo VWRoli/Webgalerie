@@ -103,7 +103,7 @@ footer a,
 
 /*? ----- SHOWCASE -----*/
 #showcase {
-  background: url(../images/showcase-bg-1.jpg) no-repeat center/cover;
+  background: rgb(255, 0, 0) url(../images/showcase-bg-1.jpg); 
   height: 100vh;
   transition: all 1s;
 }
