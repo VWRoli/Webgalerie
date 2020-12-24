@@ -6,12 +6,10 @@ const favElAll = document.querySelectorAll('.far');
 //Change BG every 10 seconds
 setInterval(function () {
   counter < 3 ? counter++ : counter = 1;
-  /* counter++;
-  counter === 4 ? counter = 1 : counter = counter; */
   document.querySelector(
     '#showcase'
-  ).style.background = `url(./images/showcase-bg-${counter}.jpg)`;
-}, 3000);
+  ).style.background = `url(./images/showcase-bg-${counter}.jpg) no-repeat center/cover`;
+}, 10000);
 
 //Favorite Button
 for (let i = 0; i < favElAll.length; i++) {
