@@ -14,9 +14,7 @@
   </head>
   <body>
     <!-- SHOWCASE -->
-
-    <section id="showcase"
-    >
+    <section id="showcase">
       <div class="overlay">
         <!-- NAV -->
 
@@ -52,6 +50,105 @@
         </div>
       </div>
     </section>
+
+    <!-- SIGNUP -->
+    <div class="signup-overlay hidden"></div>
+    <div class="signup-wrapper">
+      <h1>Bei Webgalerie registrieren</h1>
+      <form action="" id="signup-form">
+        <div class="group">
+          <label for="nickname" id="nickname-label">Nickname</label>
+          <input
+            type="text"
+            name="nickname"
+            id="nickname"
+            placeholder="Geben Sie Ihren Nickname"
+          />
+        </div>
+
+        <div class="group">
+          <label for="email" id="email-label">Email</label>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            placeholder="Geben Sie Ihre Email"
+          />
+        </div>
+
+        <div class="group">
+          <label for="password" id="password-label">Passwort</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Geben Sie Ihre Passwort"
+          />
+        </div>
+
+        <div class="group">
+          <button type="submit" id="signup" class="btn-primary btn-submit">
+            Registrieren
+          </button>
+        </div>
+      </form>
+      <div class="accept-terms">
+        <p>
+          Mit der Registrierung erfolgt Zustimmung zu den
+          <a href="agb.html">Allgemeinen Geschäftsbedingungen</a> und der
+          <a href="datenschutz.html">Datenschutzerklärung</a>.
+        </p>
+      </div>
+      <div class="already-member">
+        <p>
+          Bereits Mitglied bei Webgalerie?
+          <a href="#" id="login-form">Hier anmelden</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- LOGIN -->
+    <div class="signup-wrapper hidden">
+      <h1>Bei Webgalerie registrieren</h1>
+      <form action="" id="login-form">
+        <div class="group">
+          <label for="nickname" id="login-nickname-label">Nickname</label>
+          <input
+            type="text"
+            name="nickname"
+            id="login-nickname"
+            placeholder="Geben Sie Ihren Nickname"
+          />
+        </div>
+
+        <div class="group">
+          <label for="password" id="login-password-label">Passwort</label>
+          <input
+            type="password"
+            name="password"
+            id="login-password"
+            placeholder="Geben Sie Ihre Passwort"
+          />
+        </div>
+
+        <div class="group">
+          <button type="submit" id="login" class="btn-primary btn-submit">
+            Anmelden
+          </button>
+        </div>
+      </form>
+
+      <div class="forgot-password">
+        <a href="#" id="forgot-pass">Passwort vergessen?</a>
+      </div>
+
+      <div class="already-member">
+        <p>
+          Nicht Mitglied bei Webgalerie?
+          <a href="#" id="signup-form">Hier registrieren</a>
+        </p>
+      </div>
+    </div>
 
     <!-- PICTURE SECTION -->
 
