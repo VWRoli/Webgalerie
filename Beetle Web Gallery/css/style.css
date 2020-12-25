@@ -46,6 +46,9 @@ a {
   margin: auto;
   text-align: center;
 }
+.hidden {
+  display: none;
+}
 
 /*? ----- NAV & FOOTER -----*/
 
@@ -101,9 +104,74 @@ footer a,
   margin: 0.5rem;
 }
 
+/*? ----- SIGN UP -----*/
+.signup-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.signup-wrapper {
+  background: var(--light-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 10px;
+}
+.signup-wrapper > * {
+  margin: 1rem 0;
+}
+.signup-wrapper h1 {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+.signup-wrapper .group input,
+.signup-wrapper .group label,
+.signup-wrapper .group button,
+.signup-wrapper .accept-terms p,
+.signup-wrapper .accept-terms a,
+.signup-wrapper .already-member p,
+.signup-wrapper .already-member a,
+.signup-wrapper .forgot-password a {
+  font-weight: 100;
+}
+.signup-wrapper .group {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.signup-wrapper .group input,
+.signup-wrapper .group .btn-submit {
+  padding: 1rem;
+  border: 1px solid #333;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+}
+.signup-wrapper .group .btn-submit {
+  cursor: pointer;
+}
+.signup-wrapper .accept-terms p,
+.signup-wrapper .accept-terms a,
+.signup-wrapper .already-member p,
+.signup-wrapper .already-member a,
+.signup-wrapper .forgot-password a {
+  font-size: 15px;
+}
+
+.signup-wrapper .accept-terms {
+  border-bottom: 1px solid rgb(202, 202, 202);
+  padding-bottom: 1rem;
+}
+
 /*? ----- SHOWCASE -----*/
 #showcase {
-  background: url(../images/showcase-bg-1.jpg) no-repeat center/cover; 
+  background: url(../images/showcase-bg-1.jpg) no-repeat center/cover;
   height: 100vh;
   transition: all 1s;
 }
@@ -236,17 +304,17 @@ footer a,
 }
 
 /*? ----- MEDIA QUERIES -----*/
-@media (max-width: 1100px){
+@media (max-width: 1100px) {
   .gallery-wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
-  footer{
+  footer {
     height: 10vh;
   }
 }
 @media (max-width: 768px) {
-  .container{
-    width: 90%
+  .container {
+    width: 90%;
   }
   .footer {
     flex-direction: column;
@@ -267,29 +335,33 @@ footer a,
   }
 }
 
-@media (max-width: 650px){
+@media (max-width: 650px) {
   /*! hamburger menu*/
-  nav, footer{
+  nav,
+  footer {
     height: 12vh;
     padding-bottom: 1rem;
   }
+  .signup-wrapper {
+    width: 100%;
+    height: 100vh;
+  }
 }
-@media (max-width: 480px){
+@media (max-width: 480px) {
   * {
     font-size: 16px;
   }
-  #showcase{
+  #showcase {
     height: 50vh;
   }
-  
-  .header{
 
+  .header {
     flex-direction: column;
   }
-  .header h1{
+  .header h1 {
     margin: auto;
   }
-  
+
   .mid-section {
     max-width: 768px;
     margin: auto;
@@ -306,7 +378,7 @@ footer a,
   }
   .mid-section #search {
     font-weight: 300;
-    padding: .5rem;
+    padding: 0.5rem;
     width: 80%;
     border: none;
     border-radius: 5px;
