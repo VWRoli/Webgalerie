@@ -131,16 +131,7 @@ footer a,
   font-size: 1.5rem;
   font-weight: 100;
 }
-/*test comment*/
-/*test comment*/
-.signup-wrapper .group input,
-.signup-wrapper .group label,
-.signup-wrapper .group button,
-.signup-wrapper .accept-terms p,
-.signup-wrapper .accept-terms a,
-.signup-wrapper .already-member p,
-.signup-wrapper .already-member a,
-.signup-wrapper .forgot-password a {
+.signup-wrapper * {
   font-weight: 100;
 }
 .signup-wrapper .group {
