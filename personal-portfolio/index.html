@@ -14,7 +14,7 @@
   </head>
   <body>
     <!-- NAVBAR -->
-    <nav id="home">
+    <nav>
       <div class="container">
         <div class="nav-burger">
           <i class="fas fa-bars fa-2x" id="burger-icon"></i>
@@ -22,7 +22,7 @@
         <div class="nav-container">
           <div class="placeholder">Placeholder</div>
           <ul class="toggle">
-            <li><a href="#home">Home</a></li>
+            <li><a href="#showcase">Home</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#about">About</a></li>
           </ul>
@@ -32,26 +32,141 @@
     </nav>
 
     <!-- SHOWCASE -->
-    <section class="showcase">
+    <section id="showcase">
       <div class="triangle"></div>
       <div class="mobile-resume">
         <button id="resume">Resume</button>
       </div>
-      <div class="social">
-        <a href="https://github.com/VWRoli"
-          ><i class="fab fa-github-square"></i
-        ></a>
-        <a href="https://www.linkedin.com/in/roland-fuest/"
-          ><i class="fab fa-linkedin"></i
-        ></a>
-        <a href="">fustroli@gmail.com</a>
+
+      <div class="main-wrapper">
+        <div class="intro">
+          <h1>Hello, I'm Roland Füst</h1>
+          <p>
+            I'm a self taught Front-end Developer. <br />My strengths include
+            HTML, CSS and JavaScript.
+          </p>
+        </div>
+        <div class="social">
+          <a href="https://github.com/VWRoli"
+            ><i class="fab fa-github-square fa-2x"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/roland-fuest/"
+            ><i class="fab fa-linkedin fa-2x"></i></a
+          ><br />
+          <a href="">fustroli@gmail.com</a>
+        </div>
       </div>
-      <div class="intro">
-        <h1>Hello, I'm Roland Füst</h1>
-        <p>
-          I'm a self taught Front End Developer. My strenghts include HTML, CSS
-          and JavaScript.
-        </p>
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+      <div class="container">
+        <h1>My Projects</h1>
+        <div class="projects-wrapper">
+          <div class="project">
+            <div class="img-wrapper">
+              <h2>VW Käfer Webgalerie</h2>
+              <img
+                src="https://source.unsplash.com/4hbJ-eymZ1o"
+                alt="VW Käfer Webgalerie"
+              />
+              <a href="" class="live-btn">Live Demo</a>
+              <a href="" class="code-btn">View Code</a>
+            </div>
+            <div class="tags">
+              <h3>Technologies:</h3>
+              <span class="html-tag tag">HTML</span>
+              <span class="css-tag tag">CSS</span>
+              <span class="js-tag tag">JavaScript</span>
+            </div>
+            <div class="summary">
+              <h3>Description:</h3>
+              <p>
+                German webgallery website. You are able to log in, create new
+                accounts and like pictures.
+              </p>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="img-wrapper">
+              <h2>Budget</h2>
+              <img src="https://source.unsplash.com/m_HRfLhgABo" alt="Budget" />
+              <a href="" class="live-btn">Live Demo</a>
+              <a href="" class="code-btn">View Code</a>
+            </div>
+            <div class="tags">
+              <h3>Technologies:</h3>
+              <span class="html-tag tag">HTML</span>
+              <span class="css-tag tag">CSS</span>
+              <span class="js-tag tag">JavaScript</span>
+            </div>
+            <div class="summary">
+              <h3>Description:</h3>
+              <p>
+                Constrol your budget month by month. Write in your income, and
+                plan your next month financially.
+              </p>
+            </div>
+          </div>
+
+          <div class="project">
+            <div class="img-wrapper">
+              <h2>Cryptocurrency Website</h2>
+              <img
+                src="https://source.unsplash.com/TekPZz1YP3A"
+                alt="Cryptocurrency Website"
+              />
+              <a href="" class="live-btn">Live Demo</a>
+              <a href="" class="code-btn">View Code</a>
+            </div>
+            <div class="tags">
+              <h3>Technologies:</h3>
+              <span class="html-tag tag">HTML</span>
+              <span class="css-tag tag">CSS</span>
+              <span class="js-tag tag">JavaScript</span><br />
+              <span class="api-tag tag">API</span>
+            </div>
+            <div class="summary">
+              <h3>Description:</h3>
+              <p>
+                Cryptocurrency educational website for beginners. Night mode
+                avialable. Live cryptocurrency tracker.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section id="about">
+      <div class="container">
+        <div class="about-wrapper">
+          <div class="about-text">
+            <h2>More About Me</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi expedita nemo ut atque eveniet, explicabo alias, ipsa recusandae, fugit natus magni dolore. Qui atque unde quibusdam in laboriosam rem iste temporibus illo, corrupti illum minus velit, aut earum. Ducimus commodi, tenetur soluta dolorum hic ad! Inventore accusamus odit aliquam magni!</p>
+          </div>
+          <div class="contacts">
+            <h3>View my codes in Github:</h3>
+            <a href="https://github.com/VWRoli"
+            ><i class="fab fa-github-square fa-2x"></i
+          ></a>
+          
+
+            <h3>More info on LinkedIn:</h3>
+            <a href="https://www.linkedin.com/in/roland-fuest/"
+            ><i class="fab fa-linkedin fa-2x"></i></a
+          >
+            <h3>Send me an Email:</h3>
+
+            <p>fustroli@gmail.com</p>
+            <h3>Download my resume:</h3>
+            <a href=""><i class="fas fa-file-download fa-2x"></i></a>
+
+        </div>
       </div>
     </section>
     <script src="./js/main.js"></script>
