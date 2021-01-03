@@ -1,28 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
 :root {
-  --navbarColor: rgb(21, 38, 56);
-  --mainColor: #152028;
-  --secondaryColor: #192734;
+  --mainColor: #152638;
+  --secondaryColor: #eee;
   --borderColor: #164d56;
-  --mainText: #fff;
-  --secondaryText: #eee;
+  --hoverColor: #f5465d;
+}
+
+/*
+   --mainColor: #152028; 
+  --secondaryColor: #192734;
   --themeDotBorder: #fff;
   --previewBg: rgba(25, 39, 52, 0.8);
   --previewShadow: #111921;
   --submitButton: #f0ead6;
-  --buttonColor: #17a2b8;
   --primary-color: #3e474e;
   --primary-btn-color: #24b2fa;
   --primary-hover-btn-color: #60c0f0;
   --secondary-btn-color: #41c47a;
   --secondary-hover-btn-color: #5ddf95;
-  --light-color: #f5f6f8;
-}
-/*? ----- UTILITIES -----*/
+  --light-color: #f5f6f8;*/
+/*? ----- GLOBAL -----*/
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Lato', sans-serif;
   font-size: 20px;
-  font-weight: bold;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* .container > * {
+  background-color: #17a2b8;
+} */
+/*? ----- NAVBAR -----*/
+#home {
+  background-color: var(--mainColor);
+}
+
+.nav-container {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+.toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+.nav-container ul li a {
+  color: var(--secondaryColor);
+  margin: 2rem;
+  text-decoration: none;
+}
+.nav-container ul li a:hover {
+  color: var(--hoverColor);
+  text-decoration: underline;
+}
+.placeholder {
+  margin-right: auto;
+  visibility: hidden;
+}
+.nav-burger {
+  width: 100%;
+  text-align: right;
+  color: var(--secondaryColor);
+  display: none;
+}
+#resume {
+  border: 3px solid var(--secondaryColor);
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  background-color: var(--mainColor);
+  color: var(--secondaryColor);
+  cursor: pointer;
+  margin-left: auto;
+  outline: none;
+}
+#resume:hover {
+  color: var(--hoverColor);
+  border-color: var(--hoverColor);
+}
+.mobile-resume {
+  display: none;
+}
+/*? ----- SHOWCASE -----*/
+.intro {
+  display: none;
+}
+/*? ----- PROJECTS -----*/
+/*? ----- ABOUT -----*/
+
+/*? ----- MEDIA -----*/
+@media (max-width: 768px) {
+  .nav-burger {
+    display: block;
+    padding: 1rem;
+  }
+  .nav-container {
+    flex-direction: column;
+    padding: 0;
+  }
+  .toggle {
+    width: 100%;
+    flex-direction: column;
+    display: none;
+    text-align: center;
+  }
+  .toggle li {
+    margin-bottom: 1rem;
+  }
+  .placeholder {
+    display: none;
+  }
+  #resume {
+    display: none;
+  }
+  .mobile-resume {
+    display: block;
+    background-color: #f5465d;
+  }
+  .active {
+    display: block;
+  }
 }
