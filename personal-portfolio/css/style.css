@@ -2,7 +2,7 @@
 :root {
   --mainColor: #152638;
   --secondaryColor: #eee;
-  --borderColor: #164d56;
+  --bgColor: #1e3042;
   --hoverColor: #f5465d;
 }
 
@@ -37,6 +37,8 @@
 /*? ----- NAVBAR -----*/
 #home {
   background-color: var(--mainColor);
+  position: fixed;
+  width: 100%;
 }
 
 .nav-container {
@@ -87,9 +89,18 @@
   display: none;
 }
 /*? ----- SHOWCASE -----*/
-.intro {
-  display: none;
+.showcase {
+  background-color: var(--secondaryColor);
+  height: 100vh;
+  width: 100vw;
 }
+.triangle {
+  width: 0;
+  height: 0;
+  border-top: 100vh solid var(--bgColor);
+  border-left: 100vw solid transparent;
+}
+
 /*? ----- PROJECTS -----*/
 /*? ----- ABOUT -----*/
 
