@@ -118,7 +118,8 @@ nav {
   text-align: center;
   background-color: var(--bgColor); /*TODO */
 }
-.social a {
+.social a,
+.social p {
   color: var(--secondaryColor);
   margin: 1rem;
 }
@@ -169,6 +170,7 @@ nav {
 .img-wrapper h2 {
   margin-bottom: 0.5rem;
 }
+/*? TAGS */
 .tag {
   padding: 0.2rem 0.4rem;
   border-radius: 5px;
@@ -189,6 +191,20 @@ nav {
 .api-tag {
   background: #45c541;
   color: #000;
+}
+.bootstrap-tag {
+  background: #7952b3;
+  color: #fff;
+}
+.react-tag {
+  background-color: #282c34;
+  color: #61dafb;
+  border: 1px solid #61dafb;
+}
+.git-tag {
+  background: #24292e;
+  color: #fff;
+  border: 1px solid #fff;
 }
 .live-btn,
 .code-btn {
@@ -215,29 +231,59 @@ nav {
 /*? ----- ABOUT -----*/
 #about {
   margin-top: 1rem;
-  padding: 10rem 0;
+  padding: 4rem 0;
   background-color: var(--bgColor);
   color: var(--secondaryColor);
   text-align: center;
 }
 .about-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   align-items: center;
 }
-.about-text h2 {
+.about-container {
+  flex: 1;
+}
+.about-wrapper h2 {
   font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.about-text p {
+  font-weight: 300;
+  margin: 0.5rem;
+}
+.skills {
   margin-bottom: 2rem;
+}
+.skills h3 {
+  margin: 0.5rem;
+}
+.contacts {
+  flex: 1;
+  color: var(--bgColor);
 }
 .contacts h3 {
   margin: 0.5rem;
+  padding: 1rem;
 }
-.contacts a {
-  color: var(--secondaryColor);
+.contacts h3:not(:first-child) {
+  border-top: 1px solid var(--bgColor);
 }
-.contacts a:hover {
+.contacts-wrapper {
+  width: fit-content;
+  margin: auto;
+  background-color: var(--secondaryColor);
+  padding: 2rem;
+  border-radius: 25px;
+}
+
+.contacts-wrapper a {
+  color: var(--liveBtnbColor);
+  margin: 1rem;
+}
+.contacts-wrapper a:hover {
   color: var(--hoverColor);
 }
+
 /*? ----- MEDIA -----*/
 @media (max-width: 768px) {
   .nav-burger {
