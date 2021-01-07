@@ -18,16 +18,14 @@
   font-family: 'Lato', sans-serif;
   font-size: 20px;
 }
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 .container {
   max-width: 1200px;
   margin: 0 auto;
 }
-/* .container > * {
-  background-color: #17a2b8;
-} */
+
 /*? ----- NAVBAR -----*/
 nav {
   background-color: var(--mainColor);
@@ -46,6 +44,9 @@ nav {
   justify-content: center;
   align-items: center;
   list-style-type: none;
+}
+.toggle li {
+  cursor: pointer;
 }
 
 .nav-container ul li a {
@@ -208,6 +209,10 @@ nav {
 .git-tag {
   background: #24292e;
   color: #fff;
+  border: 1px solid #fff;
+}
+.responsive-tag {
+  background-color: #f75b5c;
   border: 1px solid #fff;
 }
 .live-btn,
