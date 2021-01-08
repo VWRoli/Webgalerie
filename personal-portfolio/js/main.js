@@ -1,35 +1,24 @@
 'use strict';
 //Variables
-const menuElAll = document.querySelectorAll('.menu-items');
+const menuEl = document.querySelector('.toggle');
+const navLinkEl = document.querySelectorAll('.nav-link');
+
 //Nav burger Toggle Button
 document.querySelector('#burger-icon').addEventListener('click', function () {
   document.querySelector('.toggle').classList.toggle('active');
 });
+
 //Close drop down menu when an item clicked
-for (let i = 0; i < menuElAll.length; i++) {
-  menuElAll[i].addEventListener('click', function () {
-    document.querySelector('.toggle').classList.toggle('active');
-  });
-}
-//Implementing smooth scrolling
-//Showcase
-const showcaseScrollTo = document.querySelector('.item-1');
-const showcase = document.querySelector('#showcase');
+const closeMenu = () => {
+  document.querySelector('.toggle').classList.toggle('active');
+};
+navLinkEl.forEach((link) => link.addEventListener('click', closeMenu));
 
-showcaseScrollTo.addEventListener('click', function () {
-  showcase.scrollIntoView({ behavior: 'smooth' });
-});
-//Project
-const projectsScrollTo = document.querySelector('.item-2');
-const project = document.querySelector('#projects');
-
-projectsScrollTo.addEventListener('click', function () {
-  project.scrollIntoView({ behavior: 'smooth' });
-});
-//About
-const aboutScrollTo = document.querySelector('.item-3');
-const aboutEl = document.querySelector('#about');
-
-aboutScrollTo.addEventListener('click', function () {
-  aboutEl.scrollIntoView({ behavior: 'smooth' });
+//Smooth scrolling
+menuEl.addEventListener('click', function (e) {
+  e.preventDefault();
+  if (e.target.classList.contains('nav-link')) {
+    const id = e.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  }
 });
