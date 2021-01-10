@@ -4,3 +4,10 @@
   margin: 0;
   padding: 0;
 }
+
+/*? SHOWCASE */
+#showcase {
+  background: url(https://source.unsplash.com/QOuHmf0_qqk/) no-repeat
+    center/cover;
+  height: 50vh;
+}
