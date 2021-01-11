@@ -68,7 +68,7 @@ innerSignup.addEventListener('click', function (e) {
   switchforms();
 });
 ///////////////////////////////////////////////////
-//Accounts
+//? Accounts
 const account1 = {
   nickname: 'roland',
   password: '1234',
@@ -85,3 +85,19 @@ const account4 = {
   nickname: 'smith',
   password: '6789',
 };
+
+const accounts = [account1, account2, account3, account4];
+
+//?Login functionality
+const inputLoginUsername = document.querySelector('#login-nickname');
+const inputLoginPassword = document.querySelector('#login-password');
+const btnLoginInner = document.querySelector('#login');
+
+let currentAccount;
+btnLoginInner.addEventListener('click', function (e) {
+  e.preventDefault();
+  currentAccount = accounts.find(
+    (acc) => acc.nickname === inputLoginUsername.value
+  );
+  console.log(currentAccount);
+});

@@ -13,10 +13,11 @@
     <title>Wilkommen | VW Käfer Webgalerie</title>
   </head>
   <body>
-    <!-- SHOWCASE -->
-    <section id="showcase">
+    <!--! SHOWCASE -->
+    <section id="showcase hidden">
+      <!--todo hidden here-->
       <div class="overlay">
-        <!-- NAV -->
+        <!--! NAV -->
 
         <nav>
           <div class="container">
@@ -29,11 +30,15 @@
               <div class="login-container">
                 <a href="#" class="btn-primary btn-login">Log In</a>
                 <a href="#" class="btn-secondary btn-signup">Sign Up</a>
+                <div class="name hidden">
+                  <h1>Wilkommen, <span class="full-name">Sample Name</span></h1>
+                </div>
               </div>
             </section>
           </div>
         </nav>
-        <div class="container">
+        <div class="hero-container hidden">
+          <!--todo hidden here-->
           <div class="mid-section">
             <h1>Finden Sie Ihren Lieblingskäfer</h1>
             <p>
@@ -51,7 +56,7 @@
       </div>
     </section>
 
-    <!-- SIGNUP -->
+    <!--! SIGNUP -->
     <div class="signup-overlay hidden"></div>
     <div class="signup-wrapper signup-display hidden">
       <h1>Bei Webgalerie registrieren</h1>
@@ -107,7 +112,7 @@
       </div>
     </div>
 
-    <!-- LOGIN -->
+    <!--! LOGIN -->
     <div class="signup-wrapper login-display hidden">
       <h1>Bei Webgalerie registrieren</h1>
       <form action="" id="login-form">
@@ -150,11 +155,20 @@
       </div>
     </div>
 
-    <!-- PICTURE SECTION -->
+    <!--! PERSONAL HEADER SECTION -->
+    <section class="personal-header">
+      <div class="container">
+        <ul class="personal-menu">
+          <li class="active-menu">Meine Uploads</li>
+          <li>Meine Favoriten</li>
+        </ul>
+      </div>
+    </section>
+    <!--! PICTURE SECTION -->
 
     <section class="pictures">
       <div class="container">
-        <h1>Beliebtesten Bilder</h1>
+        <h1 class="welcome">Beliebtesten Bilder</h1>
         <div class="gallery-wrapper">
           <div class="gallery-container w-2 h-2">
             <div class="gallery-item">
