@@ -5,7 +5,7 @@ const favElAll = document.querySelectorAll('.far');
 
 //Change BG every 10 seconds
 setInterval(function () {
-  counter < 3 ? counter++ : counter = 1;
+  counter < 3 ? counter++ : (counter = 1);
   document.querySelector(
     '#showcase'
   ).style.background = `url(./images/showcase-bg-${counter}.jpg) no-repeat center/cover`;
