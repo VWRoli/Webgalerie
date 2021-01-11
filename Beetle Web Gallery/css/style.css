@@ -68,7 +68,7 @@ nav .not-bold {
   font-weight: lighter;
   font-size: 1.5rem;
 }
-.login a {
+.login-contianer a {
   margin-left: 1rem;
 }
 .header,
@@ -84,7 +84,7 @@ footer a,
 .footer p {
   color: var(--light-color);
 }
-.login {
+.login-contianer {
   display: flex;
   align-items: center;
 }
