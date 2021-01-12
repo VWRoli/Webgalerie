@@ -3,21 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Glass UI</title>
   </head>
   <body>
+    <!--? BACKGROUND -->
+
     <div class="secondary-bg-circle"></div>
     <div class="bg-circle"></div>
     <div class="bubble-1"></div>
     <div class="bubble-2"></div>
+
     <div class="container">
+      <!--? DASHBOARD -->
       <div class="dashboard">
-        <img
-          src="https://source.unsplash.com/jnHC70ZR2ss"
-          alt=""
+        <!-- <img
+          src="https://source.unsplash.com/QU41aIQ-laQ"
+          alt=" Personal Photo"
           width="150px"
-        />
+        /> -->
+        <div class="dash-container">
+          <div class="img-container"></div>
+          <h2 class="name">Jane Doe</h2>
+          <p>Books: <span class="book-number">203</span></p>
+          <div class="menu-container">
+            <ul>
+              <li><i class="fas fa-book"></i> Shelf</li>
+              <li><i class="fas fa-book-reader"></i> Reading Now</li>
+              <li><i class="fas fa-list-ul"></i> Wishlist</li>
+              <li><i class="fas fa-star"> </i> Favorites</li>
+            </ul>
+          </div>
+
+          <figure class="quote">
+            <blockquote class="blockquote">
+              “A room without books is like a body without a soul.”
+            </blockquote>
+            <figcaption class="blockquote-footer">
+              Marcus Tullius Cicero
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <!--? CONTENT -->
+      <div class="content-wrapper">
+        <h1 class="main-header">My Shelf</h1>
       </div>
     </div>
   </body>
