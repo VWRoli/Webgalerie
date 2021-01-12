@@ -7,6 +7,8 @@
   --secondary-btn-color: #41c47a;
   --secondary-hover-btn-color: #5ddf95;
   --light-color: #f5f6f8;
+  --tertiary-btn-color: #ff5383;
+  --tertiary-hover-btn-color: #ff6d97;
 }
 
 /*? ----- UTILITIES -----*/
@@ -28,6 +30,8 @@ a {
   padding: 0.5rem 1.5rem;
   border-radius: 5px;
   font-weight: 500;
+  border: none;
+  cursor: pointer;
 }
 
 .btn-primary {
@@ -42,14 +46,12 @@ a {
 .btn-secondary:hover {
   background-color: var(--secondary-hover-btn-color);
 }
+
 .container,
 .hero-container {
   width: 80%;
   margin: auto;
   text-align: center;
-}
-.hidden {
-  display: none;
 }
 
 /*? ----- NAV & FOOTER -----*/
@@ -102,10 +104,14 @@ footer a,
   font-size: 1.4rem;
   margin: 0.5rem;
 }
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+.welcome {
+  color: var(--light-color);
+  display: flex;
+  align-items: center;
+}
+.first-name {
+  font-weight: 500;
+  margin-right: 1rem;
 }
 /*? ----- SIGN UP -----*/
 .signup-overlay {
@@ -174,7 +180,6 @@ footer {
 #showcase {
   background: url(../images/showcase-bg-1.jpg) no-repeat center/cover;
   height: 100%;
-
   transition: all 1s;
 }
 .overlay {
@@ -187,12 +192,17 @@ footer {
   color: var(--light-color);
   padding: 1rem;
 }
+.mid-section > * {
+  margin: 2rem;
+}
 .mid-section h1 {
   font-size: 2.5rem;
+  font-weight: 500;
   margin: 1rem;
 }
 .mid-section p {
   margin: 1rem;
+  font-weight: 500;
 }
 .mid-section #search {
   font-weight: 300;
@@ -201,7 +211,17 @@ footer {
   border: none;
   border-radius: 5px;
 }
-
+.hero-container {
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+.btn-logout {
+  background-color: var(--tertiary-btn-color);
+}
+.btn-logout:hover {
+  background-color: var(--tertiary-hover-btn-color);
+}
 /*? ----- PICTURES -----*/
 .pictures .container h1 {
   text-align: left;
@@ -304,8 +324,8 @@ footer {
   grid-row: span 6;
 }
 
-/*? ----- PERSONAL HEADER -----*/
-.personal-header {
+/*? ----- PERSONAL MENU -----*/
+.personal-container {
   background: #eee;
   color: var(--primary-color);
   min-height: 2rem;
@@ -405,4 +425,7 @@ footer {
     border: none;
     border-radius: 5px;
   }
+}
+.hidden {
+  display: none;
 }

@@ -25,11 +25,12 @@
               >
             </h1>
             <div class="login-container">
-              <a href="#" class="btn-primary btn-login">Anmelden</a>
-              <a href="#" class="btn-secondary btn-signup">Registrieren</a>
-              <div class="name hidden">
-                <h1>Wilkommen, <span class="full-name">Sample Name</span></h1>
-              </div>
+              <button class="btn-primary btn-login">Anmelden</button>
+              <button class="btn-secondary btn-signup">Registrieren</button>
+            </div>
+            <div class="welcome hidden">
+              <h1>Wilkommen, <span class="first-name"></span></h1>
+              <button class="btn-secondary btn-logout">Abmeldungen</button>
             </div>
           </section>
         </div>
@@ -39,18 +40,25 @@
           <div class="hero-container">
             <div class="mid-section">
               <h1>Finden Sie Ihren Lieblingskäfer</h1>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Blanditiis, doloremque?
-              </p>
-              <input
+              <p>Melden Sie sich an, um Bilder anzuzeigen.</p>
+              <!-- <input
                 type="search"
                 name="search"
                 id="search"
                 placeholder="Suchen..."
-              />
+              /> -->
             </div>
           </div>
+        </div>
+      </section>
+
+      <!--! PERSONAL MENU SECTION -->
+      <section class="personal-container hidden">
+        <div class="container">
+          <ul class="personal-menu">
+            <li class="active-menu">Meine Uploads</li>
+            <li>Meine Favoriten</li>
+          </ul>
         </div>
       </section>
 
@@ -152,272 +160,262 @@
           </p>
         </div>
       </div>
-
-      <!--! PERSONAL HEADER SECTION -->
-      <section class="personal-header hidden">
-        <div class="container">
-          <ul class="personal-menu">
-            <li class="active-menu">Meine Uploads</li>
-            <li>Meine Favoriten</li>
-          </ul>
-        </div>
-      </section>
-
-      <!--! PICTURE SECTION -->
-
-      <section class="pictures hidden">
-        <div class="container">
-          <h1 class="welcome">Beliebtesten Bilder</h1>
-          <div class="gallery-wrapper">
-            <div class="gallery-container w-2 h-2">
-              <div class="gallery-item">
-                <div class="image">
-                  <img
-                    src="https://source.unsplash.com/Fp7qRMsOB0s/"
-                    alt="nature"
-                  />
-                </div>
-                <div class="user">
-                  <p><a href="#">von Benutzer 2</a></p>
-                  <i class="far fa-star"></i>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-container h-3">
-              <div class="gallery-item">
-                <div class="image">
-                  <img src="./images/img_01.jpg" alt="nature" />
-                </div>
-                <div class="user">
-                  <p><a href="#">von Benutzer 11</a></p>
-                  <i class="far fa-star"></i>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-container h-2">
-              <div class="gallery-item">
-                <div class="image">
-                  <img
-                    src="https://source.unsplash.com/pgpRhbXJ8YY/"
-                    alt="nature"
-                  />
-                </div>
-                <div class="user">
-                  <p><a href="#">von Benutzer 1</a></p>
-                  <i class="far fa-star"></i>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-container h-2">
-              <div class="gallery-item">
-                <div class="image">
-                  <img
-                    src="https://source.unsplash.com/bjsX5xQRAgo/"
-                    alt="nature"
-                  />
-                </div>
-                <div class="user">
-                  <p><a href="#">von Benutzer 3</a></p>
-                  <i class="far fa-star"></i>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-container h-4">
-              <div class="gallery-item">
-                <div class="image">
-                  <img
-                    src="https://source.unsplash.com/I0bAF8ITe5Y/"
-                    alt="nature"
-                  />
-                </div>
-                <div class="user">
-                  <p><a href="#">von Benutzer 5</a></p>
-                  <i class="far fa-star"></i>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-container h-3 w-2">
-              <div class="gallery-item">
-                <div class="image">
-                  <img
-                    src="https://source.unsplash.com/eDnW0H-dg-k/"
-                    alt="nature"
-                  />
-                </div>
-                <div class="user">
-                  <p><a href="#">von Benutzer 2</a></p>
-                  <i class="far fa-star"></i>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-container h-3">
-              <div class="gallery-item">
-                <div class="image">
-                  <img
-                    src="https://source.unsplash.com/cFDHzhNLTPg/"
-                    alt="nature"
-                  />
-                </div>
-                <div class="user">
-                  <p><a href="#">von Benutzer 9</a></p>
-                  <i class="far fa-star"></i>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-container w-2 h-2">
-              <div class="gallery-item">
-                <div class="image">
-                  <img
-                    src="https://source.unsplash.com/SqT01553Fbg/"
-                    alt="nature"
-                  />
-                </div>
-                <div class="user">
-                  <p><a href="#">von Benutzer 8</a></p>
-                  <i class="far fa-star"></i>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-container h-3">
-              <div class="gallery-item">
-                <div class="image">
-                  <img
-                    src="https://source.unsplash.com/x12AYnW8h_8/"
-                    alt="nature"
-                  />
-                </div>
-                <div class="user">
-                  <p><a href="#">von Benutzer 7</a></p>
-                  <i class="far fa-star"></i>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-container h-3">
-              <div class="gallery-item">
-                <div class="image">
-                  <img
-                    src="https://source.unsplash.com/3yzE1SUfbwY/"
-                    alt="nature"
-                  />
-                </div>
-                <div class="user">
-                  <p><a href="#">von Benutzer 1</a></p>
-                  <i class="far fa-star"></i>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-container h-2">
-              <div class="gallery-item">
-                <div class="image">
-                  <img
-                    src="https://source.unsplash.com/n72XSmc3Rlc/"
-                    alt="nature"
-                  />
-                </div>
-                <div class="user">
-                  <p><a href="#">von Benutzer 6</a></p>
-                  <i class="far fa-star"></i>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-container h-3">
-              <div class="gallery-item">
-                <div class="image">
-                  <img
-                    src="https://source.unsplash.com/-njbxKXL0uk/"
-                    alt="nature"
-                  />
-                </div>
-                <div class="user">
-                  <p><a href="#">von Benutzer 1</a></p>
-                  <i class="far fa-star"></i>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-container h-2 w-2">
-              <div class="gallery-item">
-                <div class="image">
-                  <img src="./images/img_03.jpg" alt="71-spar" />
-                </div>
-                <div class="user">
-                  <p><a href="#">von Benutzer 11</a></p>
-                  <i class="far fa-star"></i>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-container h-3 w-2">
-              <div class="gallery-item">
-                <div class="image">
-                  <img
-                    src="https://source.unsplash.com/iTzKdV8TNOU/"
-                    alt="71-spar"
-                  />
-                </div>
-                <div class="user">
-                  <p><a href="#">von Benutzer 11</a></p>
-                  <i class="far fa-star"></i>
-                </div>
-              </div>
-            </div>
-
-            <div class="gallery-container h-2">
-              <div class="gallery-item">
-                <div class="image">
-                  <img
-                    src="https://source.unsplash.com/djZ9ASWr_fU/"
-                    alt="71-spar"
-                  />
-                </div>
-                <div class="user">
-                  <p><a href="#">von Benutzer 11</a></p>
-                  <i class="far fa-star"></i>
-                </div>
-              </div>
-            </div>
-            <!---->
-          </div>
-        </div>
-      </section>
-
-      <!-- FOOTER -->
-
-      <footer>
-        <div class="container">
-          <section class="footer">
-            <div class="footer-links">
-              <a href="#">Datenschutz</a>
-              <a href="#">AGB</a>
-              <a href="#">Impressum</a>
-            </div>
-            <div><p>&copy; 2020 VW Käfer Webgalerie</p></div>
-            <div class="social">
-              <a href="https://www.facebook.com/"
-                ><i class="fab fa-facebook-square"></i
-              ></a>
-              <a href="https://twitter.com/"
-                ><i class="fab fa-twitter-square"></i
-              ></a>
-              <a href="https://www.instagram.com/"
-                ><i class="fab fa-instagram-square"></i
-              ></a>
-            </div>
-          </section>
-        </div>
-      </footer>
     </div>
+
+    <!--! PICTURE SECTION -->
+
+    <section class="pictures hidden">
+      <div class="container">
+        <h1>Beliebtesten Bilder</h1>
+        <div class="gallery-wrapper">
+          <div class="gallery-container w-2 h-2">
+            <div class="gallery-item">
+              <div class="image">
+                <img
+                  src="https://source.unsplash.com/Fp7qRMsOB0s/"
+                  alt="nature"
+                />
+              </div>
+              <div class="user">
+                <p><a href="#">von Benutzer 2</a></p>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-container h-3">
+            <div class="gallery-item">
+              <div class="image">
+                <img src="./images/img_01.jpg" alt="nature" />
+              </div>
+              <div class="user">
+                <p><a href="#">von Benutzer 11</a></p>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-container h-2">
+            <div class="gallery-item">
+              <div class="image">
+                <img
+                  src="https://source.unsplash.com/pgpRhbXJ8YY/"
+                  alt="nature"
+                />
+              </div>
+              <div class="user">
+                <p><a href="#">von Benutzer 1</a></p>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-container h-2">
+            <div class="gallery-item">
+              <div class="image">
+                <img
+                  src="https://source.unsplash.com/bjsX5xQRAgo/"
+                  alt="nature"
+                />
+              </div>
+              <div class="user">
+                <p><a href="#">von Benutzer 3</a></p>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-container h-4">
+            <div class="gallery-item">
+              <div class="image">
+                <img
+                  src="https://source.unsplash.com/I0bAF8ITe5Y/"
+                  alt="nature"
+                />
+              </div>
+              <div class="user">
+                <p><a href="#">von Benutzer 5</a></p>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-container h-3 w-2">
+            <div class="gallery-item">
+              <div class="image">
+                <img
+                  src="https://source.unsplash.com/eDnW0H-dg-k/"
+                  alt="nature"
+                />
+              </div>
+              <div class="user">
+                <p><a href="#">von Benutzer 2</a></p>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-container h-3">
+            <div class="gallery-item">
+              <div class="image">
+                <img
+                  src="https://source.unsplash.com/cFDHzhNLTPg/"
+                  alt="nature"
+                />
+              </div>
+              <div class="user">
+                <p><a href="#">von Benutzer 9</a></p>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-container w-2 h-2">
+            <div class="gallery-item">
+              <div class="image">
+                <img
+                  src="https://source.unsplash.com/SqT01553Fbg/"
+                  alt="nature"
+                />
+              </div>
+              <div class="user">
+                <p><a href="#">von Benutzer 8</a></p>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-container h-3">
+            <div class="gallery-item">
+              <div class="image">
+                <img
+                  src="https://source.unsplash.com/x12AYnW8h_8/"
+                  alt="nature"
+                />
+              </div>
+              <div class="user">
+                <p><a href="#">von Benutzer 7</a></p>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-container h-3">
+            <div class="gallery-item">
+              <div class="image">
+                <img
+                  src="https://source.unsplash.com/3yzE1SUfbwY/"
+                  alt="nature"
+                />
+              </div>
+              <div class="user">
+                <p><a href="#">von Benutzer 1</a></p>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-container h-2">
+            <div class="gallery-item">
+              <div class="image">
+                <img
+                  src="https://source.unsplash.com/n72XSmc3Rlc/"
+                  alt="nature"
+                />
+              </div>
+              <div class="user">
+                <p><a href="#">von Benutzer 6</a></p>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-container h-3">
+            <div class="gallery-item">
+              <div class="image">
+                <img
+                  src="https://source.unsplash.com/-njbxKXL0uk/"
+                  alt="nature"
+                />
+              </div>
+              <div class="user">
+                <p><a href="#">von Benutzer 1</a></p>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-container h-2 w-2">
+            <div class="gallery-item">
+              <div class="image">
+                <img src="./images/img_03.jpg" alt="71-spar" />
+              </div>
+              <div class="user">
+                <p><a href="#">von Benutzer 11</a></p>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-container h-3 w-2">
+            <div class="gallery-item">
+              <div class="image">
+                <img
+                  src="https://source.unsplash.com/iTzKdV8TNOU/"
+                  alt="71-spar"
+                />
+              </div>
+              <div class="user">
+                <p><a href="#">von Benutzer 11</a></p>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-container h-2">
+            <div class="gallery-item">
+              <div class="image">
+                <img
+                  src="https://source.unsplash.com/djZ9ASWr_fU/"
+                  alt="71-spar"
+                />
+              </div>
+              <div class="user">
+                <p><a href="#">von Benutzer 11</a></p>
+                <i class="far fa-star"></i>
+              </div>
+            </div>
+          </div>
+          <!---->
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <section class="footer">
+          <div class="footer-links">
+            <a href="#">Datenschutz</a>
+            <a href="#">AGB</a>
+            <a href="#">Impressum</a>
+          </div>
+          <div><p>&copy; 2020 VW Käfer Webgalerie</p></div>
+          <div class="social">
+            <a href="https://www.facebook.com/"
+              ><i class="fab fa-facebook-square"></i
+            ></a>
+            <a href="https://twitter.com/"
+              ><i class="fab fa-twitter-square"></i
+            ></a>
+            <a href="https://www.instagram.com/"
+              ><i class="fab fa-instagram-square"></i
+            ></a>
+          </div>
+        </section>
+      </div>
+    </footer>
+
     <script src="./js/main.js"></script>
   </body>
 </html>

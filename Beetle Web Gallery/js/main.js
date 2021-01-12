@@ -1,9 +1,34 @@
 'use strict';
 //Variables
+//? Accounts
+const account1 = {
+  firstName: 'Roland',
+  username: 'roland',
+  password: '1234',
+};
+const account2 = {
+  firstName: 'Egon',
+  username: 'egon89',
+  password: '4321',
+};
+const account3 = {
+  firstName: 'Sarah',
+  username: 'sarah123',
+  password: '9876',
+};
+const account4 = {
+  firstName: 'Jonas',
+  username: 'jonas1',
+  password: '6789',
+};
+
+const accounts = [account1, account2, account3, account4];
+/////////////////////////////////////////////////////
 let counter = 1;
 const favEl = document.querySelector('.far');
 const favElAll = document.querySelectorAll('.far');
-//login, signup
+
+//login, signup button variables
 const btnLoginEL = document.querySelector('.btn-login');
 const btnSignupEL = document.querySelector('.btn-signup');
 const signupDisplay = document.querySelector('.signup-display');
@@ -12,6 +37,16 @@ const signupOverlay = document.querySelector('.signup-overlay');
 const loginContainer = document.querySelector('.login-container');
 const innerLogin = document.querySelector('#inner-login-form');
 const innerSignup = document.querySelector('#inner-signup-form');
+
+//Login function variables
+const inputLoginUsername = document.querySelector('#login-username');
+const inputLoginPassword = document.querySelector('#login-password');
+const btnLoginInner = document.querySelector('#login');
+const showcase = document.querySelector('#showcase');
+const welcome = document.querySelector('.welcome');
+const personalMenu = document.querySelector('.personal-container');
+const welcomeName = document.querySelector('.first-name');
+const btnLogout = document.querySelector('.btn-logout');
 
 //Change BG every 10 seconds
 setInterval(function () {
@@ -68,42 +103,18 @@ innerSignup.addEventListener('click', function (e) {
   switchforms();
 });
 ///////////////////////////////////////////////////
-//? Accounts
-const account1 = {
-  firstName: 'Roland',
-  username: 'roland',
-  password: '1234',
-};
-const account2 = {
-  firstName: 'Egon',
-  username: 'egon89',
-  password: '4321',
-};
-const account3 = {
-  firstName: 'Sarah',
-  username: 'sarah123',
-  password: '9876',
-};
-const account4 = {
-  firstName: 'Jonas',
-  username: 'jonas1',
-  password: '6789',
-};
-
-const accounts = [account1, account2, account3, account4];
 
 //?Login functionality
-const inputLoginUsername = document.querySelector('#login-username');
-const inputLoginPassword = document.querySelector('#login-password');
-const btnLoginInner = document.querySelector('#login');
-const showcase = document.querySelector('#showcase');
 
 let currentAccount;
+
+//Login button
 btnLoginInner.addEventListener('click', function (e) {
   e.preventDefault();
   checkLoginCred();
 });
 
+//Check credentials
 const checkLoginCred = function () {
   currentAccount = accounts.find(
     (acc) => acc.username === inputLoginUsername.value
@@ -111,11 +122,31 @@ const checkLoginCred = function () {
   console.log(currentAccount);
   if (currentAccount.password === inputLoginPassword.value) {
     console.log('correct');
-    showcase.classList.add('hidden');
-
-    signupOverlay.classList.add('hidden');
-    loginDisplay.classList.add('hidden');
+    toggleUI(currentAccount);
   } else {
     console.log('incorrect pass');
   }
 };
+
+//Display UI after login
+const toggleUI = (acc) => {
+  //Showcase
+  signupOverlay.classList.add('hidden');
+  loginDisplay.classList.add('hidden');
+
+  showcase.classList.toggle('hidden');
+  //disable login buttons
+  loginContainer.classList.toggle('hidden');
+  // Show personal menu
+  personalMenu.classList.toggle('hidden');
+  // Show Welcome message and logout button
+  welcome.classList.toggle('hidden');
+  if (acc === undefined) return;
+  welcomeName.textContent = `${acc.firstName}`;
+};
+
+btnLogout.addEventListener('click', function (e) {
+  e.preventDefault();
+  console.log('click');
+  toggleUI();
+});
