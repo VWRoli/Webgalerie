@@ -70,34 +70,52 @@ innerSignup.addEventListener('click', function (e) {
 ///////////////////////////////////////////////////
 //? Accounts
 const account1 = {
-  nickname: 'roland',
+  firstName: 'Roland',
+  username: 'roland',
   password: '1234',
 };
 const account2 = {
-  nickname: 'john',
+  firstName: 'Egon',
+  username: 'egon89',
   password: '4321',
 };
 const account3 = {
-  nickname: 'sarah',
+  firstName: 'Sarah',
+  username: 'sarah123',
   password: '9876',
 };
 const account4 = {
-  nickname: 'smith',
+  firstName: 'Jonas',
+  username: 'jonas1',
   password: '6789',
 };
 
 const accounts = [account1, account2, account3, account4];
 
 //?Login functionality
-const inputLoginUsername = document.querySelector('#login-nickname');
+const inputLoginUsername = document.querySelector('#login-username');
 const inputLoginPassword = document.querySelector('#login-password');
 const btnLoginInner = document.querySelector('#login');
+const showcase = document.querySelector('#showcase');
 
 let currentAccount;
 btnLoginInner.addEventListener('click', function (e) {
   e.preventDefault();
+  checkLoginCred();
+});
+
+const checkLoginCred = function () {
   currentAccount = accounts.find(
-    (acc) => acc.nickname === inputLoginUsername.value
+    (acc) => acc.username === inputLoginUsername.value
   );
   console.log(currentAccount);
-});
+  if (currentAccount.password === inputLoginPassword.value) {
+    console.log('correct');
+    showcase.classList.add('hidden');
+
+    signupOverlay.classList.add('hidden');
+    loginDisplay.classList.add('hidden');
+  } else {
+    console.log('incorrect pass');
+  }
+};

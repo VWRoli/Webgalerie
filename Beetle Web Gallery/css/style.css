@@ -44,7 +44,6 @@ a {
 }
 .container,
 .hero-container {
-  height: 100%;
   width: 80%;
   margin: auto;
   text-align: center;
@@ -54,15 +53,11 @@ a {
 }
 
 /*? ----- NAV & FOOTER -----*/
-
 nav,
 footer {
   background-color: var(--primary-color);
-  height: 8vh;
 }
-footer {
-  margin-top: 1rem;
-}
+
 nav h1 a {
   font-weight: 500;
   font-size: 1.5rem;
@@ -77,10 +72,10 @@ nav .not-bold {
 }
 .header,
 .footer {
+  height: 8vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  height: 100%;
   align-items: center;
 }
 .header a,
@@ -107,7 +102,11 @@ footer a,
   font-size: 1.4rem;
   margin: 0.5rem;
 }
-
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
 /*? ----- SIGN UP -----*/
 .signup-overlay {
   background: rgba(0, 0, 0, 0.4);
@@ -133,10 +132,10 @@ footer a,
 }
 .signup-wrapper h1 {
   font-size: 1.5rem;
-  font-weight: 100;
+  font-weight: 300;
 }
 .signup-wrapper * {
-  font-weight: 100;
+  font-weight: 300;
 }
 .signup-wrapper .group {
   margin: 1rem 0;
@@ -152,6 +151,7 @@ footer a,
 }
 .signup-wrapper .group .btn-submit {
   cursor: pointer;
+  font-weight: 500;
 }
 .signup-wrapper .accept-terms p,
 .signup-wrapper .accept-terms a,
@@ -167,9 +167,14 @@ footer a,
 }
 
 /*? ----- SHOWCASE -----*/
+.landing {
+  height: 100vh;
+  overflow: hidden;
+}
 #showcase {
   background: url(../images/showcase-bg-1.jpg) no-repeat center/cover;
-  height: 100vh;
+  height: 100%;
+
   transition: all 1s;
 }
 .overlay {
@@ -180,7 +185,6 @@ footer a,
   max-width: 768px;
   margin: auto;
   color: var(--light-color);
-  margin-top: 25vh;
   padding: 1rem;
 }
 .mid-section h1 {
