@@ -129,7 +129,7 @@ body {
 }
 
 .img-container {
-  background: url(https://source.unsplash.com/QU41aIQ-laQ) no-repeat
+  background: var(--borderColor) url(1../img/IMG_20210113_112400.jpg) no-repeat
     center/cover;
   height: 150px;
   width: 150px;
@@ -156,9 +156,10 @@ body {
   line-height: 2rem;
   display: flex;
   justify-content: flex-start;
-  padding: 1rem;
+  padding: 0.5rem;
   font-weight: 500;
   cursor: pointer;
+  font-size: 1rem;
 }
 .active-menu,
 .menu-container ul li:hover {
@@ -172,17 +173,21 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-size: 2rem;
-  margin-right: 2rem;
+  margin-right: 1.8rem;
 }
-.quote {
+.skills {
   background: var(--quoteBgColor);
   margin: 0;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   border-radius: 25px;
 }
-.blockquote {
-  margin-left: 0;
-  margin-right: 0;
+.skills h3 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+.skills p {
+  font-size: 0.8rem;
+  margin: 0;
 }
 
 /*? CONTENT */
@@ -200,7 +205,7 @@ body {
 .main-header {
   font-weight: 500;
 }
-#search {
+/* #search {
   font-size: 1rem;
   border: 0;
   border-radius: 15px;
@@ -220,7 +225,7 @@ input[type='search'] {
 }
 .search i {
   cursor: pointer;
-}
+} */
 /*? CARD */
 .card {
   border-radius: 30px;
@@ -228,6 +233,7 @@ input[type='search'] {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(3, 33px);
+  grid-column-gap: 10px;
   margin: 3rem;
   padding: 1rem 1.5rem;
   -webkit-box-shadow: 5px 5px 20px -1px rgba(0, 0, 0, 0.15);
@@ -251,16 +257,16 @@ input[type='search'] {
   color: #fff;
 }
 .img-1 {
-  background: url(https://libris.to/media/jacket/04303483_flowers-for-algernon.jpg)
-    no-repeat center/cover;
+  background: url(https://source.unsplash.com/EaB4Ml7C7fE) no-repeat
+    center/cover;
 }
 .img-2 {
-  background: url(https://libris.to/media/jacket/01296260_looking-for-alaska.jpg)
-    no-repeat center/cover;
+  background: url(https://source.unsplash.com/m_HRfLhgABo) no-repeat
+    center/cover;
 }
 .img-3 {
-  background: url(https://i.harperapps.com/hcanz/covers/9780732291501/x293.jpg)
-    no-repeat center/cover;
+  background: url(https://source.unsplash.com/_SgRNwAVNKw) no-repeat
+    center/cover;
 }
 .title {
   font-weight: 500;
@@ -284,7 +290,7 @@ input[type='search'] {
   grid-row-start: 3;
   grid-row-end: 4;
 }
-.rating {
+.info {
   height: 99px;
   width: 99px;
   grid-column-start: 5;
@@ -293,8 +299,8 @@ input[type='search'] {
   grid-row-end: 4;
   display: grid;
   place-items: center;
-  font-weight: 500;
-  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: center;
 }
 
 /*? PROGRESS BAR */
@@ -325,7 +331,7 @@ input[type='search'] {
   .content-wrapper {
     padding: 0;
   }
-  .quote {
+  .skills {
     display: none;
   }
   .card {
@@ -367,8 +373,7 @@ input[type='search'] {
   .card {
     margin: 1.5rem;
   }
-  .main-header,
-  #search {
+  .main-header {
     margin-left: 1.5rem;
   }
 }
@@ -394,7 +399,7 @@ input[type='search'] {
     height: 280px;
     width: 280px;
   }
-  .rating {
+  .info {
     display: none;
   }
 }
@@ -403,16 +408,16 @@ input[type='search'] {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 33px);
   }
-  .search {
+  /* .search {
     width: 85%;
   }
   #search {
     max-width: 100%;
-  }
+  } */
   .progress {
     display: none;
   }
-  .rating {
+  .info {
     display: grid;
     height: 33px;
     width: 33px;
