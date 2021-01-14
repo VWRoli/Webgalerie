@@ -30,22 +30,28 @@
           <p>Front-end Developer</p>
           <div class="menu-container">
             <ul>
-              <li><i class="fas fa-laptop-code"></i><span>Main Page</span></li>
+              <li><i class="fas fa-desktop"></i><span>Main Page</span></li>
               <li class="active-menu">
                 <i class="fas fa-code"></i><span>My Projects</span>
               </li>
-              <li><i class="far fa-address-card"></i><span>Contact</span></li>
+              <li>
+                <i class="far fa-address-card"></i><span>My Details</span>
+              </li>
               <li><i class="fas fa-file-download"></i><span>Resume</span></li>
             </ul>
           </div>
 
           <div class="skills">
             <h3>Front-end skills:</h3>
-            <p>HTML, CSS, JavaScript</p>
+            <span class="html-tag tag">HTML</span>
+            <span class="css-tag tag">CSS</span>
+            <span class="js-tag tag">JavaScript</span>
             <h3>Libraries, Frameworks:</h3>
-            <p>Bootstrap, React</p>
+            <span class="bootstrap-tag tag">Bootstrap</span>
+            <span class="react-tag tag">React</span>
             <h3>Other:</h3>
-            <p>Git (Github), Responsive Design</p>
+            <span class="git-tag tag">Git (Github)</span>
+            <span class="responsive-tag tag">Responsive Design</span>
           </div>
         </div>
       </div>
@@ -54,7 +60,8 @@
       <div class="content-wrapper">
         <div class="content-container">
           <!--? MAIN -->
-          <section class="main-wrapper">
+
+          <section class="main-wrapper wrapper">
             <div class="intro">
               <h1>Hello, I'm Roland Füst</h1>
               <p>
@@ -76,71 +83,109 @@
               <p>fustroli@gmail.com</p>
             </div>
           </section>
+          <!--? PROJECTS -->
+
+          <section class="projects">
+            <h1 class="main-header">My Projects</h1>
+            <div class="cards">
+              <div class="card">
+                <div class="card-img img-1"></div>
+                <h3 class="title">Web Gallery</h3>
+                <p class="techs">
+                  <span class="html-tag tag">HTML</span>
+                  <span class="css-tag tag">CSS</span>
+                  <span class="js-tag tag">JavaScript</span>
+                </p>
+                <div class="btn-container">
+                  <button class="btn btn-code">
+                    <a href="#"><span class="view-text">View</span> Code</a>
+                  </button>
+                  <button class="btn btn-demo">
+                    <a href="#"><span class="view-text">View</span> Demo</a>
+                  </button>
+                </div>
+                <div class="info"><button class="btn-info">Info</button></div>
+              </div>
+
+              <div class="card">
+                <div class="card-img img-2"></div>
+                <h3 class="title">Crypto Education Site</h3>
+                <p class="techs">
+                  <span class="html-tag tag">HTML</span>
+                  <span class="css-tag tag">CSS</span>
+                  <span class="js-tag tag">JavaScript</span>
+                </p>
+                <div class="btn-container">
+                  <button class="btn btn-code">
+                    <a href="#"><span class="view-text">View</span> Code</a>
+                  </button>
+                  <button class="btn btn-demo">
+                    <a href="#"><span class="view-text">View</span> Demo</a>
+                  </button>
+                </div>
+                <div class="info"><button class="btn-info">Info</button></div>
+              </div>
+
+              <div class="card">
+                <div class="card-img img-3"></div>
+                <h3 class="title">Affiliate Site</h3>
+                <p class="techs">
+                  <span class="html-tag tag">HTML</span>
+                  <span class="css-tag tag">CSS</span>
+                  <span class="js-tag tag">JavaScript</span>
+                </p>
+                <div class="btn-container">
+                  <button class="btn btn-code">
+                    <a href="#"><span class="view-text">View</span> Code</a>
+                  </button>
+                  <button class="btn btn-demo">
+                    <a href="#"><span class="view-text">View</span> Demo</a>
+                  </button>
+                </div>
+                <div class="info"><button class="btn-info">Info</button></div>
+              </div>
+            </div>
+          </section>
+
+          <!--? DETAILS -->
+
+          <section class="details-wrapper wrapper">
+            <div class="about-text">
+              <h2>More About Me</h2>
+              <p>
+                I'm a self taught Front-end Developer. My main focus is JS and
+                React. I enjoy solving problems that a developer has to face day
+                after day.
+              </p>
+              <p>
+                My native language is Hungarian, but I speak fluent English, and
+                I also have a conversational level German knowledge.
+              </p>
+            </div>
+            <div class="contacts">
+              <h3>View my codes:</h3>
+              <a href="https://github.com/VWRoli" target="_blank"
+                ><i class="fab fa-github-square fa-2x"></i
+              ></a>
+              <a href="https://codepen.io/VWRoli" target="_blank"
+                ><i class="fab fa-codepen fa-2x"></i
+              ></a>
+
+              <h3>More info on LinkedIn:</h3>
+              <a
+                href="https://www.linkedin.com/in/roland-fuest/"
+                target="_blank"
+                ><i class="fab fa-linkedin fa-2x"></i
+              ></a>
+              <h3>Send me an Email:</h3>
+
+              <a href="#">fustroli@gmail.com</a>
+              <h3>Download my resume:</h3>
+              <a href="#"><i class="fas fa-file-download fa-2x"></i></a>
+            </div>
+          </section>
         </div>
       </div>
     </div>
   </body>
 </html>
-<!--? PROJECTS -->
-<!-- 
-<section class="projects">
-  <h1 class="main-header">My Projects</h1>
-  <div class="cards">
-    <div class="card">
-      <div class="card-img img-1"></div>
-      <h3 class="title">Web Gallery</h3>
-      <p class="techs">
-        <span class="html-tag tag">HTML</span>
-        <span class="css-tag tag">CSS</span>
-        <span class="js-tag tag">JavaScript</span>
-      </p>
-      <div class="btn-container">
-        <button class="btn btn-code">
-          <a href="#"><span class="view-text">View</span> Code</a>
-        </button>
-        <button class="btn btn-demo">
-          <a href="#"><span class="view-text">View</span> Demo</a>
-        </button>
-      </div>
-      <div class="info"><button class="btn-info">Info</button></div>
-    </div>
-
-    <div class="card">
-      <div class="card-img img-2"></div>
-      <h3 class="title">Crypto Education Site</h3>
-      <p class="techs">
-        <span class="html-tag tag">HTML</span>
-        <span class="css-tag tag">CSS</span>
-        <span class="js-tag tag">JavaScript</span>
-      </p>
-      <div class="btn-container">
-        <button class="btn btn-code">
-          <a href="#"><span class="view-text">View</span> Code</a>
-        </button>
-        <button class="btn btn-demo">
-          <a href="#"><span class="view-text">View</span> Demo</a>
-        </button>
-      </div>
-      <div class="info"><button class="btn-info">Info</button></div>
-    </div>
-
-    <div class="card">
-      <div class="card-img img-3"></div>
-      <h3 class="title">Affiliate Site</h3>
-      <p class="techs">
-        <span class="html-tag tag">HTML</span>
-        <span class="css-tag tag">CSS</span>
-        <span class="js-tag tag">JavaScript</span>
-      </p>
-      <div class="btn-container">
-        <button class="btn btn-code">
-          <a href="#"><span class="view-text">View</span> Code</a>
-        </button>
-        <button class="btn btn-demo">
-          <a href="#"><span class="view-text">View</span> Demo</a>
-        </button>
-      </div>
-      <div class="info"><button class="btn-info">Info</button></div>
-    </div>
-  </div>
-</section> -->
