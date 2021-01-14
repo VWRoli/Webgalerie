@@ -29,3 +29,16 @@ detailsBtn.addEventListener('click', function () {
 
 //menu-nav
 mainPageBtn.classList.add('active-menu');
+
+const menuElAll = document.querySelector('.menu-nav');
+const menuBtn = document.querySelectorAll('.menu-btn');
+
+menuElAll.addEventListener('click', function (e) {
+  const clicked = e.target.closest('li');
+  console.log(clicked);
+
+  if (!clicked) return;
+
+  menuBtn.forEach((btn) => btn.classList.remove('active-menu'));
+  clicked.classList.add('active-menu');
+});
