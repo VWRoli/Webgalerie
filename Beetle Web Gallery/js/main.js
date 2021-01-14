@@ -1,28 +1,17 @@
 'use strict';
 //Variables
 //? Accounts
-const account1 = {
-  firstName: 'Roland',
-  username: 'roland',
-  password: '1234',
-};
-const account2 = {
-  firstName: 'Egon',
-  username: 'egon89',
-  password: '4321',
-};
-const account3 = {
-  firstName: 'Sarah',
-  username: 'sarah123',
-  password: '9876',
-};
-const account4 = {
-  firstName: 'Jonas',
-  username: 'jonas1',
-  password: '6789',
-};
 
-const accounts = [account1, account2, account3, account4];
+const CreateAccount = function (firstName, username, password) {
+  this.firstName = firstName;
+  this.username = username;
+  this.password = password;
+};
+const roland = new CreateAccount('roland', 'roland', 1234);
+const egon = new CreateAccount('egon', 'egon89', 4321);
+
+const accounts = [roland, egon];
+
 /////////////////////////////////////////////////////
 let counter = 1;
 const favEl = document.querySelector('.far');
@@ -37,6 +26,12 @@ const signupOverlay = document.querySelector('.signup-overlay');
 const loginContainer = document.querySelector('.login-container');
 const innerLogin = document.querySelector('#inner-login-form');
 const innerSignup = document.querySelector('#inner-signup-form');
+
+//signup function variables
+const submitSignupBtn = document.querySelector('#signup');
+const submitSignupUsername = document.querySelector('#signup-username');
+const submitSignupName = document.querySelector('#signup-name');
+const submitSignupPass = document.querySelector('#signup-password');
 
 //Login function variables
 const inputLoginUsername = document.querySelector('#login-username');
@@ -102,6 +97,26 @@ innerSignup.addEventListener('click', function (e) {
   //e.preventDefault();
   switchforms();
 });
+
+///////////////////////////////////////////////////
+
+//?Signup functionality
+
+submitSignupBtn.addEventListener('click', function (e) {
+  e.preventDefault();
+  const account3 = new CreateAccount(
+    submitSignupName.value,
+    submitSignupUsername.value,
+    submitSignupPass.value
+  );
+  console.log(account3);
+  accounts.push(account3);
+  console.log(accounts);
+  console.log('You can Log in now');
+  signupOverlay.classList.add('hidden');
+  signupDisplay.classList.add('hidden');
+});
+
 ///////////////////////////////////////////////////
 
 //?Login functionality
@@ -119,8 +134,8 @@ const checkLoginCred = function () {
   currentAccount = accounts.find(
     (acc) => acc.username === inputLoginUsername.value
   );
-  console.log(currentAccount);
-  if (currentAccount.password === inputLoginPassword.value) {
+
+  if (currentAccount.password.toString() === inputLoginPassword.value) {
     console.log('correct');
     toggleUI(currentAccount);
   } else {
