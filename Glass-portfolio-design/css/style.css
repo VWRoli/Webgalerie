@@ -25,6 +25,7 @@
     rgba(255, 255, 255, 0.7),
     rgba(255, 255, 255, 0.9)
   );
+  --secondaryText: #5bcab6;
 }
 /*? GLOBAL */
 
@@ -46,6 +47,7 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
 /*? Background*/
 
 .bg-circle {
@@ -199,6 +201,11 @@ body {
 }
 
 /*? CONTENT */
+.content {
+  transition: transform 1s;
+  height: 500px;
+}
+
 .content-wrapper {
   width: 70%;
   padding: 4rem;
@@ -206,7 +213,9 @@ body {
   place-items: center;
 }
 .content-container {
-  margin: 2rem;
+  overflow: hidden;
+  margin: 1rem;
+  height: 500px;
 }
 .main-header {
   margin-right: 3rem;
@@ -215,7 +224,9 @@ body {
 .main-header {
   font-weight: 500;
 }
+
 /*? MAIN-PAGE */
+
 .wrapper {
   background: var(--dashBgColor);
   border: 1px solid var(--borderColor);
@@ -224,7 +235,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 4rem;
 }
 .intro h1 {
   margin-bottom: 2rem;
@@ -251,6 +261,9 @@ body {
   -webkit-box-shadow: 5px 5px 20px -1px rgba(0, 0, 0, 0.15);
   box-shadow: 5px 5px 20px -1px rgba(0, 0, 0, 0.15);
   justify-content: center;
+}
+.card:first-child {
+  margin-top: 0;
 }
 .card-img {
   height: 99px;
@@ -343,31 +356,32 @@ body {
   color: var(--mainTextColor);
 }
 .btn-info {
-  background: linear-gradient(to right top, #6596f6, #65dfc9);
   border: 1px solid var(--bgColor);
   border-radius: 25px;
   padding: 0.5rem 1rem;
-  color: var(--mainTextColor);
+  color: var(--secondaryText);
+  font-size: 2rem;
+  font-weight: 500;
   -moz-box-shadow: inset 0 0 10px rgb(0, 0, 0, 0.5);
   -webkit-box-shadow: inset 0 0 10px rgb(0, 0, 0, 0.5);
   box-shadow: inset 0 0 10px rgb(0, 0, 0, 0.5);
   background: var(--mainBgColor);
   opacity: 0.6;
-  backdrop-filter: blur(2rem);
   height: 99px;
   width: 99px;
-  font-size: 1rem;
 }
 
 /*? DETAILS */
 .details-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
 }
-.about-text h2 {
+.about-text {
+  padding: 1rem;
+}
+.about-text h3 {
   font-weight: 500;
-}
-.about-text p {
 }
 .contacts a {
   color: var(--mainTextColor);
@@ -609,6 +623,11 @@ body {
 @media (max-width: 740px) {
   * {
     font-size: 14px;
+  }
+  .details-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
   }
 }
 @media (max-width: 580px) {
