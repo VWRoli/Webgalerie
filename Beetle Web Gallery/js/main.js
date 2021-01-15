@@ -2,11 +2,13 @@
 //Variables
 //? Accounts
 
-const CreateAccount = function (firstName, username, password) {
-  this.firstName = firstName;
-  this.username = username;
-  this.password = password;
-};
+class CreateAccount {
+  constructor(firstName, username, password) {
+    this.firstName = firstName;
+    this.username = username;
+    this.password = password;
+  }
+}
 const roland = new CreateAccount('roland', 'roland', 1234);
 const egon = new CreateAccount('egon', 'egon89', 4321);
 

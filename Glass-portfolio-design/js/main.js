@@ -1,8 +1,6 @@
 'use strict';
 
-//Content slider
-const content = document.querySelectorAll('.content');
-
+//Variables
 const mainPageBtn = document.querySelector('.main-page-btn');
 const projectsBtn = document.querySelector('.my-projects-btn');
 const detailsBtn = document.querySelector('.my-details-btn');
@@ -17,15 +15,15 @@ const slide = (percentage) => {
   detailsWrapper.style.transform = `translateY(${percentage}%)`;
 };
 
-mainPageBtn.addEventListener('click', function () {
-  slide(0);
-});
-projectsBtn.addEventListener('click', function () {
-  slide(-100);
-});
-detailsBtn.addEventListener('click', function () {
-  slide(-200);
-});
+const slider = (target) => {
+  if (target === mainPageBtn) {
+    slide(0);
+  } else if (target === projectsBtn) {
+    slide(-100);
+  } else if (target === detailsBtn) {
+    slide(-200);
+  }
+};
 
 //menu-nav
 mainPageBtn.classList.add('active-menu');
@@ -41,4 +39,7 @@ menuElAll.addEventListener('click', function (e) {
 
   menuBtn.forEach((btn) => btn.classList.remove('active-menu'));
   clicked.classList.add('active-menu');
+
+  //content slider
+  slider(clicked);
 });

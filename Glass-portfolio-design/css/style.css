@@ -139,7 +139,7 @@ body {
 }
 
 .img-container {
-  background: var(--borderColor) url(1../img/IMG_20210113_112400.jpg) no-repeat
+  background: var(--borderColor) url(../img/IMG_20210113_112400.jpg) no-repeat
     center/cover;
   height: 150px;
   width: 150px;
@@ -629,6 +629,12 @@ body {
     grid-template-columns: 1fr;
     align-items: center;
   }
+  .view-text {
+    display: none;
+  }
+  .tag {
+    display: none;
+  }
 }
 @media (max-width: 580px) {
   * {
@@ -638,9 +644,7 @@ body {
     height: 50px;
     width: 50px;
   }
-  .view-text {
-    display: none;
-  }
+
   .bg-circle,
   .secondary-bg-circle {
     height: 280px;
@@ -674,6 +678,7 @@ body {
   .content-wrapper {
     width: 80%;
   }
+
   .techs {
     display: none;
   }
@@ -685,5 +690,13 @@ body {
   }
   .content-container {
     margin: 1rem;
+  }
+  .card {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 33px);
+    grid-column-gap: 10px;
+  }
+  .about-text {
+    display: none;
   }
 }
