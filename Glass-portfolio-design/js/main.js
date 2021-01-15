@@ -33,7 +33,6 @@ const menuBtn = document.querySelectorAll('.menu-btn');
 
 menuElAll.addEventListener('click', function (e) {
   const clicked = e.target.closest('li');
-  console.log(clicked);
 
   if (!clicked) return;
 

@@ -8,6 +8,7 @@
 
   --circleBgColor: linear-gradient(to top, #297fd9, #65dfc9);
   --secondaryCircleBgColor: linear-gradient(to left bottom, #297fd9, #65dfc9);
+  --iconBgColor: linear-gradient(to left bottom, #297fd9, #65dfc9);
   --mainBgColor: linear-gradient(
     to right bottom,
     rgb(255, 255, 255, 0.4),
@@ -26,6 +27,21 @@
     rgba(255, 255, 255, 0.9)
   );
   --secondaryText: #5bcab6;
+  --winter: linear-gradient(217deg, #6596f6, rgba(255, 0, 0, 0) 70.71%),
+    linear-gradient(127deg, #65dfc9, rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, #d7fff2, rgba(0, 0, 255, 0) 70.71%);
+
+  --spring: linear-gradient(217deg, #1e87de, rgba(255, 0, 0, 0) 70.71%),
+    linear-gradient(127deg, #a2cfba, rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, #34bd18, rgba(0, 0, 255, 0) 70.71%);
+
+  --summer: linear-gradient(217deg, #009efe, rgba(255, 0, 0, 0) 70.71%),
+    linear-gradient(127deg, #d19b5b, rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, #f2f536, rgba(0, 0, 255, 0) 70.71%);
+
+  --autumn: linear-gradient(217deg, #f32305, rgba(255, 0, 0, 0) 70.71%),
+    linear-gradient(127deg, #fef503, rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, #de026a, rgba(0, 0, 255, 0) 70.71%);
 }
 /*? GLOBAL */
 
@@ -42,7 +58,7 @@ body {
   place-content: center;
 }
 * i {
-  background: var(--secondaryCircleBgColor);
+  background: var(--iconBgColor);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -105,6 +121,39 @@ body {
   border-radius: 50%;
   backdrop-filter: blur(2rem);
 }
+/*? Themes */
+#theme-options-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.theme-btn {
+  height: 30px;
+  width: 30px;
+  background-color: var(--quoteBgColor);
+  border-radius: 50%;
+  margin: 5px;
+  border: 2px solid var(--borderColor);
+  -webkit-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 1px 3px -1px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+.theme-btn:hover {
+  border-width: 4px;
+}
+#winter-mode {
+  background: var(--winter);
+}
+#spring-mode {
+  background: var(--spring);
+}
+#summer-mode {
+  background: var(--summer);
+}
+#autumn-mode {
+  background: var(--autumn);
+}
+
 /*? MAIN */
 
 .container {
@@ -146,13 +195,7 @@ body {
   border-radius: 50%;
   margin: auto;
 }
-.book-number {
-  background: var(--secondaryCircleBgColor);
-  color: #fff;
-  font-weight: 500;
-  border-radius: 15px;
-  padding: 0 5px;
-}
+
 .name {
   font-weight: 500;
 }

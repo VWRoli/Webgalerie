@@ -1,0 +1,29 @@
+:root {
+  --bgColor: linear-gradient(to top, #d19b5b, #cfcea2, #009efe);
+
+  --quoteBgColor: linear-gradient(217deg, #009efe, rgba(255, 0, 0, 0) 70.71%),
+    linear-gradient(127deg, #d19b5b, rgba(0, 255, 0, 0) 70.71%),
+    linear-gradient(336deg, #f2f536, rgba(0, 0, 255, 0) 70.71%);
+
+  --circleBgColor: linear-gradient(to top, #f3e9b7, #e4e683);
+  --secondaryCircleBgColor: linear-gradient(to left bottom, #f3e9b7, #e4e683);
+  --iconBgColor: linear-gradient(to left bottom, #009efe, #d19b5b);
+  --mainBgColor: linear-gradient(
+    to right bottom,
+    rgb(255, 255, 255, 0.4),
+    rgb(255, 255, 255, 0.1)
+  );
+  --dashBgColor: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255, 0.3),
+    rgb(255, 255, 255, 0.4)
+  );
+  --borderColor: rgba(255, 255, 255, 0.5);
+  --mainTextColor: rgb(58, 81, 125, 0.9);
+  --cardBg: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.9)
+  );
+  --secondaryText: #5bcab6;
+}
