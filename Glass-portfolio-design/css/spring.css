@@ -5,8 +5,8 @@
     linear-gradient(127deg, #3af516, rgba(0, 255, 0, 0) 70.71%),
     linear-gradient(336deg, #f53abb, rgba(0, 0, 255, 0) 70.71%);
 
-  --circleBgColor: linear-gradient(to top, #f53abb, #3af516);
-  --secondaryCircleBgColor: linear-gradient(to left bottom, #f53abb, #3af516);
+  --circleBgColor: linear-gradient(to top, #cb5166, #3af516);
+  --secondaryCircleBgColor: linear-gradient(to left bottom, #cb5166, #3af516);
   --iconBgColor: linear-gradient(to left bottom, #1e87de, #3af516);
   --mainBgColor: linear-gradient(
     to right bottom,

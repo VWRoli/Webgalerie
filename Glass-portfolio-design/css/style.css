@@ -57,6 +57,7 @@ body {
   display: grid;
   place-content: center;
 }
+
 * i {
   background: var(--iconBgColor);
   -webkit-background-clip: text;
@@ -188,7 +189,7 @@ body {
 }
 
 .img-container {
-  background: var(--borderColor) url(../img/IMG_20210113_112400.jpg) no-repeat
+  background: var(--borderColor) url(../img/profile_pic.jpg) no-repeat
     center/cover;
   height: 150px;
   width: 150px;
@@ -325,16 +326,13 @@ body {
   color: #fff;
 }
 .img-1 {
-  background: url(https://source.unsplash.com/EaB4Ml7C7fE) no-repeat
-    center/cover;
+  background: url(../img/memory.png) no-repeat center/cover;
 }
 .img-2 {
-  background: url(https://source.unsplash.com/m_HRfLhgABo) no-repeat
-    center/cover;
+  background: url(../img/tictactoe.png) no-repeat center/cover;
 }
 .img-3 {
-  background: url(https://source.unsplash.com/_SgRNwAVNKw) no-repeat
-    center/cover;
+  background: url(../img/fret.png) no-repeat center/cover;
 }
 .title {
   font-weight: 500;
