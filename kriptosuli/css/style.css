@@ -17,6 +17,9 @@ email 848484
   --tertiary: #868686;
   --linkColor: #00abed;
   --hoverColor: #ff4500;
+  --lightBorder: #e8e8e8;
+  --footerBg: #a6a6a6;
+  --footerText: #696969;
 }
 /************GLOBAL*************/
 body {
@@ -187,18 +190,24 @@ nav {
   font-size: 1.1rem;
 }
 
-/****/
+/************RECENT ARTICLE SECTION*************/
+
 .medium-article {
-  border-bottom: solid 1px #e8e8e8;
-  padding: 15px 35px 15px 0;
+  border-bottom: solid 1px var(--lightBorder);
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 .medium-article img {
-  max-width: 280px;
-  height: auto;
+  grid-column: span 1;
+}
+
+.medium-article img {
+  max-width: 290px;
   transition: opacity 0.2s ease-in-out;
 }
 .post-info {
-  display: table-cell;
+  grid-column: span 3;
   vertical-align: top;
   margin-top: 5px;
   padding-left: 15px;
@@ -407,16 +416,14 @@ table h4 {
   margin: 10px 0;
 }
 
-/*-----------------FOOTER-------------------*/
+/************FOOTER*************/
+
 footer {
-  background: #a6a6a6;
-  height: auto;
-  margin: 0px;
+  background: var(--footerBg);
   padding: 30px;
-  clear: both;
-  font-size: 80%;
+  font-size: 0.8rem;
   text-align: center;
-  color: dimgray;
+  color: var(--footerText);
 }
 
 footer ul {
@@ -427,33 +434,15 @@ footer ul {
 footer ul li {
   display: inline-block;
   padding: 0 10px;
-  margin: 0;
 }
 footer ul li a {
-  color: #fff;
+  color: var(--primaryColor);
   text-decoration: none;
-  margin: 0;
-  padding: 0;
   text-align: center;
-}
-#four {
-  font-size: 184px;
-}
-#five {
-  font-size: 74px;
-}
-#six {
-  font-size: 25px;
-}
-#three {
-  margin: 55px;
-  color: #1a7391;
-}
-#three img {
-  max-width: 100%;
 }
 
 /************MEDIA QUERIES*************/
+
 @media (max-width: 940px) {
   .menu-item {
     padding: 0 1rem;
@@ -509,6 +498,9 @@ footer ul li a {
   }
   .secondary-article {
     margin-right: 5px;
+  }
+  .med-img {
+    display: none;
   }
 }
 
