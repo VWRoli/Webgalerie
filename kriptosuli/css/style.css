@@ -14,7 +14,7 @@ email 848484
 :root {
   --primaryColor: #fff;
   --darkColor: #3c3c3c;
-  --tertiary: #808080;
+  --tertiary: #868686;
   --linkColor: #00abed;
   --hoverColor: #ff4500;
 }
@@ -104,34 +104,29 @@ nav {
 }
 /************SLOGAN*************/
 #slogan-cont {
-  background-color: #868686;
-  display: block;
+  background-color: var(--tertiary);
+  color: var(--primaryColor);
 }
 #slogan {
-  background-color: #868686;
-  color: #fff;
-  height: auto;
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 5px 35px;
-  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
-#slogan p {
-  background-color: #868686;
-  display: block;
-  float: left;
-  max-width: 85%;
-  font-size: 15px;
-  margin: 12x;
-  padding: 0;
+.slogan-text {
+  grid-column: span 10;
 }
-#social {
-  float: right;
-  margin: 12px;
-  max-width: 12%;
+.social {
+  grid-column: span 1;
 }
-#social a {
-  padding: 0 5px;
+.theme-btns {
+  grid-column-start: 12;
+  grid-column-end: 13;
+}
+.theme-btns i:hover {
+  cursor: pointer;
+  color: var(--linkColor);
 }
 
 /*-----------------MAINPAGE-----------------*/
@@ -486,9 +481,20 @@ footer ul li a {
 }
 
 /************MEDIA QUERIES*************/
-@media (max-width: 930px) {
+@media (max-width: 940px) {
   .menu-item {
     padding: 0 1rem;
+  }
+  .slogan-text {
+    display: none;
+  }
+  #slogan {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+  .social {
+    padding: 0 2rem;
   }
 }
 
