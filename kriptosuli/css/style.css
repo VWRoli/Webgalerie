@@ -43,6 +43,7 @@ body a:hover {
   margin: 0 auto;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
+  color: var(--darkText);
 }
 img {
   max-width: 100%;
@@ -61,7 +62,16 @@ img {
 table img:hover {
   opacity: 0.6;
 }
-
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.theme-active {
+  color: var(--linkColor);
+  pointer-events: none;
+}
 /************NAVBAR*************/
 nav {
   background-color: var(--darkColor);
@@ -140,6 +150,7 @@ nav {
 }
 .slogan-text {
   grid-column: span 10;
+  color: var(--primaryColor);
 }
 .social {
   grid-column: span 1;
@@ -151,6 +162,9 @@ nav {
 .theme-btns i:hover {
   cursor: pointer;
   color: var(--linkColor);
+}
+.theme-btn {
+  color: var(--darkColor);
 }
 
 /************MAIN ARTICLE SECTION*************/
@@ -438,7 +452,7 @@ footer ul li {
   padding: 0 10px;
 }
 footer ul li a {
-  color: var(--darkText);
+  color: var(--lightText);
   text-decoration: none;
   text-align: center;
 }
