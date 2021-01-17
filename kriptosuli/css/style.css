@@ -20,6 +20,8 @@ email 848484
   --lightBorder: #e8e8e8;
   --footerBg: #a6a6a6;
   --footerText: #696969;
+  --lightText: #e8e8e8;
+  --darkText: #000;
 }
 /************GLOBAL*************/
 body {
@@ -27,6 +29,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background: var(--primaryColor);
 }
 body a {
   color: var(--linkColor);
@@ -174,7 +177,7 @@ nav {
 .third-article h2 {
   position: absolute;
   font-size: 2rem;
-  color: var(--primaryColor);
+  color: var(--lightText);
   bottom: 0;
   left: 1.5rem;
   text-shadow: 1px 2px #000;
@@ -211,6 +214,7 @@ nav {
   vertical-align: top;
   margin-top: 5px;
   padding-left: 15px;
+  color: var(--darkText);
 }
 .post-info h3 {
   padding: 0;
@@ -427,8 +431,6 @@ footer {
 }
 
 footer ul {
-  padding: 0;
-  margin: 0;
   list-style-type: none;
 }
 footer ul li {
@@ -436,7 +438,7 @@ footer ul li {
   padding: 0 10px;
 }
 footer ul li a {
-  color: var(--primaryColor);
+  color: var(--darkText);
   text-decoration: none;
   text-align: center;
 }
