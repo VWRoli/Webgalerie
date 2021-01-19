@@ -1,6 +1,6 @@
 'use strict';
 //Variables
-//? Accounts
+const rolandImages = [];
 const klausImages = [
   {
     imgLink: `https://source.unsplash.com/Fp7qRMsOB0s`,
@@ -126,7 +126,7 @@ class CreateAccount {
     this.images = images;
   }
 }
-const roland = new CreateAccount('roland', 'roland', 1234);
+const roland = new CreateAccount('roland', 'roland', 1234, rolandImages);
 const klaus = new CreateAccount('klaus', 'klaus89', 4321, klausImages);
 const martha = new CreateAccount('martha', 'martha', 1111, marthaImages);
 const daniel = new CreateAccount('daniel', 'daniel', 2222, danielImages);
@@ -160,7 +160,7 @@ const inputLoginPassword = document.querySelector('#login-password');
 const btnLoginInner = document.querySelector('#login');
 const showcase = document.querySelector('#showcase');
 const welcome = document.querySelector('.welcome');
-const personalMenu = document.querySelector('.personal-container');
+const personalContainer = document.querySelector('.personal-container');
 const welcomeName = document.querySelector('.first-name');
 const btnLogout = document.querySelector('.btn-logout');
 const loginMessage = document.querySelector('.login-message');
@@ -168,6 +168,9 @@ const loginMessage = document.querySelector('.login-message');
 //Image gallery
 const galleryContainer = document.querySelector('.gallery-container');
 const landing = document.querySelector('.landing');
+
+const personalMenu = document.querySelector('.personal-menu');
+const menuItems = document.querySelectorAll('.menu-item');
 
 //Change BG every 10 seconds
 setInterval(function () {
@@ -243,7 +246,8 @@ submitSignupBtn.addEventListener('click', function (e) {
     newAccount = new CreateAccount(
       submitSignupName.value,
       submitSignupUsername.value,
-      submitSignupPass.value
+      submitSignupPass.value,
+      []
     );
     loginMessage.classList.remove('hidden');
     signupDisplay.classList.add('hidden');
@@ -293,14 +297,14 @@ const toggleUI = (acc) => {
   //disable login buttons
   loginContainer.classList.toggle('hidden');
   // Show personal menu
-  personalMenu.classList.toggle('hidden');
+  personalContainer.classList.toggle('hidden');
   //show pictures showcase
-  if (personalMenu.classList.contains('hidden')) {
+  if (personalContainer.classList.contains('hidden')) {
     showcase.classList.remove('hidden');
     galleryContainer.classList.add('hidden');
     landing.style.height = '100vh';
   } else {
-    showImages(acc.images);
+    showUploadedImages(acc.images);
   }
   // Show Welcome message and logout button
   welcome.classList.toggle('hidden');
@@ -313,13 +317,27 @@ btnLogout.addEventListener('click', function (e) {
   toggleUI();
 });
 
-const showImages = function (images) {
+//Personal menu tabs
+personalMenu.addEventListener('click', function (e) {
+  const clicked = e.target;
+  const id = clicked.id;
+
+  if (clicked.classList.contains('menu-item')) {
+    menuItems.forEach((item) => item.classList.remove('active-menu'));
+    clicked.classList.add('active-menu');
+  }
+
+  if (id === `uploads`) showUploadedImages(currentAccount.images);
+  if (id === `all-photos`) showAllImages(accounts);
+});
+
+//Show uploaded images tab
+const showUploadedImages = function (images) {
   galleryContainer.innerHTML = '';
   galleryContainer.classList.remove('hidden');
   landing.style.height = 'fit-content';
 
   if (images === undefined) return;
-  images.forEach((img) => console.log(img.imgLink));
 
   images.forEach(function (image) {
     const html = `
@@ -333,5 +351,28 @@ const showImages = function (images) {
     </div>
     </div>`;
     galleryContainer.insertAdjacentHTML('beforeend', html);
+  });
+};
+
+//Show all images tab
+const showAllImages = function (accounts) {
+  galleryContainer.innerHTML = '';
+  galleryContainer.classList.remove('hidden');
+  landing.style.height = 'fit-content';
+
+  accounts.forEach(function (acc) {
+    acc.images.forEach((image) => {
+      const html = `
+      <div class="gallery-item w-${image.width} h-${image.height}">
+      <div class="image">
+      <img src="${image.imgLink}" alt="" />
+      </div>
+      <div class="controls">
+      <p><a href="#" class="user">${image.owner}</a></p>
+      <i class="far fa-star"></i>
+      </div>
+      </div>`;
+      galleryContainer.insertAdjacentHTML('beforeend', html);
+    });
   });
 };
