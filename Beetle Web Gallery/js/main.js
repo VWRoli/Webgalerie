@@ -1,18 +1,57 @@
 'use strict';
 //Variables
 //? Accounts
+const klausImages = [
+  {
+    imgLink: `<img src="https://source.unsplash.com/Fp7qRMsOB0s/" alt=""/>`,
+    owner: 'klaus',
+    width: 2,
+    height: 2,
+  },
+  {
+    imgLink: `<img src="https://source.unsplash.com/pgpRhbXJ8YY/" alt=""/>`,
+    owner: 'klaus',
+    width: 1,
+    height: 2,
+  },
+  {
+    imgLink: `<img src="https://source.unsplash.com/I0bAF8ITe5Y/" alt=""/>`,
+    owner: 'klaus',
+    width: 1,
+    height: 4,
+  },
+  {
+    imgLink: `<img src="https://source.unsplash.com/eDnW0H-dg-k/" alt=""/>`,
+    owner: 'klaus',
+    width: 2,
+    height: 3,
+  },
+  {
+    imgLink: `<img src="https://source.unsplash.com/cFDHzhNLTPg/" alt=""/>`,
+    owner: 'klaus',
+    width: 1,
+    height: 3,
+  },
+  {
+    imgLink: `<img src="https://source.unsplash.com/SqT01553Fbg/" alt=""/>`,
+    owner: 'klaus',
+    width: 2,
+    height: 2,
+  },
+];
 
 class CreateAccount {
-  constructor(firstName, username, password) {
+  constructor(firstName, username, password, images) {
     this.firstName = firstName;
     this.username = username;
     this.password = password;
+    this.images = images;
   }
 }
 const roland = new CreateAccount('roland', 'roland', 1234);
-const egon = new CreateAccount('egon', 'egon89', 4321);
+const klaus = new CreateAccount('klaus', 'klaus89', 4321, klausImages);
 
-const accounts = [roland, egon];
+const accounts = [roland, klaus];
 
 /////////////////////////////////////////////////////
 let counter = 1;
@@ -44,6 +83,10 @@ const welcome = document.querySelector('.welcome');
 const personalMenu = document.querySelector('.personal-container');
 const welcomeName = document.querySelector('.first-name');
 const btnLogout = document.querySelector('.btn-logout');
+const loginMessage = document.querySelector('.login-message');
+
+//Image gallery
+const galleryContainer = document.querySelector('.gallery-container');
 
 //Change BG every 10 seconds
 setInterval(function () {
@@ -106,17 +149,37 @@ innerSignup.addEventListener('click', function (e) {
 
 submitSignupBtn.addEventListener('click', function (e) {
   e.preventDefault();
-  const account3 = new CreateAccount(
-    submitSignupName.value,
-    submitSignupUsername.value,
-    submitSignupPass.value
-  );
-  console.log(account3);
-  accounts.push(account3);
-  console.log(accounts);
-  console.log('You can Log in now');
-  signupOverlay.classList.add('hidden');
-  signupDisplay.classList.add('hidden');
+  let account3;
+  //Fill in the form
+  if (
+    submitSignupName.value === '' &&
+    submitSignupUsername.value === '' &&
+    submitSignupPass.value === ''
+  ) {
+    submitSignupName.style.background = `var(--tertiary-hover-btn-color)`;
+    submitSignupUsername.style.background = `var(--tertiary-hover-btn-color)`;
+    submitSignupPass.style.background = `var(--tertiary-hover-btn-color)`;
+  } else {
+    //If form filled, create account
+    account3 = new CreateAccount(
+      submitSignupName.value,
+      submitSignupUsername.value,
+      submitSignupPass.value
+    );
+    console.log('You can Log in now');
+    loginMessage.classList.remove('hidden');
+    signupDisplay.classList.add('hidden');
+    //signupDisplay.textContent = 'Sie können sich jetzt anmelden';
+
+    console.log(account3);
+    accounts.push(account3);
+    console.log(accounts);
+    setTimeout(function () {
+      signupOverlay.classList.add('hidden');
+      signupDisplay.classList.add('hidden');
+      loginMessage.classList.add('hidden');
+    }, 1000);
+  }
 });
 
 ///////////////////////////////////////////////////
@@ -140,6 +203,7 @@ const checkLoginCred = function () {
   if (currentAccount.password.toString() === inputLoginPassword.value) {
     console.log('correct');
     toggleUI(currentAccount);
+    console.log(currentAccount);
   } else {
     console.log('incorrect pass');
   }
@@ -156,6 +220,7 @@ const toggleUI = (acc) => {
   loginContainer.classList.toggle('hidden');
   // Show personal menu
   personalMenu.classList.toggle('hidden');
+  showImages();
   // Show Welcome message and logout button
   welcome.classList.toggle('hidden');
   if (acc === undefined) return;
@@ -164,6 +229,10 @@ const toggleUI = (acc) => {
 
 btnLogout.addEventListener('click', function (e) {
   e.preventDefault();
-  console.log('click');
   toggleUI();
 });
+
+const showImages = function () {
+  galleryContainer.classList.remove('hidden');
+  document.querySelector('.landing').style.height = 'fit-content';
+};

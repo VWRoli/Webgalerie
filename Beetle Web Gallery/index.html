@@ -10,412 +10,231 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./js/main.js"></script>
     <title>Wilkommen | VW Käfer Webgalerie</title>
   </head>
   <body>
-    <!--! SHOWCASE -->
-    <!--! NAV -->
-    <div class="landing">
-      <nav>
-        <div class="container">
-          <section class="header">
-            <h1>
-              <a href="index.html"
-                >VW Käfer <span class="not-bold">Webgalerie</span></a
-              >
-            </h1>
-            <div class="login-container">
-              <button class="btn-primary btn-login">Anmelden</button>
-              <button class="btn-secondary btn-signup">Registrieren</button>
+    <div id="page-container">
+      <div id="content-wrap">
+        <!--! SHOWCASE -->
+        <!--! NAV -->
+
+        <div class="landing">
+          <nav>
+            <div class="container">
+              <section class="header">
+                <h1>
+                  <a href="index.html"
+                    >VW Käfer <span class="not-bold">Webgalerie</span></a
+                  >
+                </h1>
+                <div class="login-container">
+                  <button class="btn-primary btn-login">Anmelden</button>
+                  <button class="btn-secondary btn-signup">Registrieren</button>
+                </div>
+                <div class="welcome hidden">
+                  <h1>Wilkommen, <span class="first-name"></span></h1>
+                  <button class="btn-secondary btn-logout">Abmeldungen</button>
+                </div>
+              </section>
             </div>
-            <div class="welcome hidden">
-              <h1>Wilkommen, <span class="first-name"></span></h1>
-              <button class="btn-secondary btn-logout">Abmeldungen</button>
-            </div>
-          </section>
-        </div>
-      </nav>
-      <section id="showcase">
-        <div class="overlay">
-          <div class="hero-container">
-            <div class="mid-section">
-              <h1>Finden Sie Ihren Lieblingskäfer</h1>
-              <p>Melden Sie sich an, um Bilder anzuzeigen.</p>
-              <!-- <input
+          </nav>
+          <section id="showcase">
+            <div class="overlay">
+              <div class="hero-container">
+                <div class="mid-section">
+                  <h1>Finden Sie Ihren Lieblingskäfer</h1>
+                  <p>Melden Sie sich an, um Bilder anzuzeigen.</p>
+                  <!-- <input
                 type="search"
                 name="search"
                 id="search"
                 placeholder="Suchen..."
               /> -->
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!--! PERSONAL MENU SECTION -->
+          <section class="personal-container hidden">
+            <div class="container">
+              <ul class="personal-menu">
+                <li class="active-menu">Meine Uploads</li>
+                <li>Meine Favoriten</li>
+              </ul>
+            </div>
+          </section>
+
+          <!--! SIGNUP -->
+          <div class="signup-overlay hidden"></div>
+          <div class="login-message hidden">Sie können sich jetzt anmelden</div>
+          <div class="signup-wrapper signup-display hidden">
+            <h1>Bei Webgalerie registrieren</h1>
+            <form action="" id="signup-form">
+              <div class="group">
+                <label for="name" id="name-label">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="signup-name"
+                  placeholder="Geben Sie Ihren Name"
+                />
+              </div>
+
+              <div class="group">
+                <label for="username" id="username-label">Benutzername</label>
+                <input
+                  type="text"
+                  name="username"
+                  id="signup-username"
+                  placeholder="Geben Sie Ihren Benutzername"
+                />
+              </div>
+
+              <div class="group">
+                <label for="password" id="password-label">Passwort</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="signup-password"
+                  placeholder="Geben Sie Ihre Passwort"
+                />
+              </div>
+
+              <div class="group">
+                <button
+                  type="submit"
+                  id="signup"
+                  class="btn-primary btn-submit"
+                >
+                  Registrieren
+                </button>
+              </div>
+            </form>
+            <div class="accept-terms">
+              <p>
+                Mit der Registrierung erfolgt Zustimmung zu den
+                <a href="agb.html">Allgemeinen Geschäftsbedingungen</a> und der
+                <a href="datenschutz.html">Datenschutzerklärung</a>.
+              </p>
+            </div>
+            <div class="already-member">
+              <p>
+                Bereits Mitglied bei Webgalerie?
+                <a href="#" id="inner-login-form">Hier anmelden</a>
+              </p>
+            </div>
+          </div>
+
+          <!--! LOGIN -->
+          <div class="signup-wrapper login-display hidden">
+            <h1>Bei Webgalerie registrieren</h1>
+            <form action="" id="login-form">
+              <div class="group">
+                <label for="username" id="login-username-label"
+                  >Benutzername</label
+                >
+                <input
+                  type="text"
+                  name="username"
+                  id="login-username"
+                  placeholder="Geben Sie Ihren Benutzername"
+                />
+              </div>
+
+              <div class="group">
+                <label for="password" id="login-password-label">Passwort</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="login-password"
+                  placeholder="Geben Sie Ihre Passwort"
+                />
+              </div>
+
+              <div class="group">
+                <button type="submit" id="login" class="btn-primary btn-submit">
+                  Anmelden
+                </button>
+              </div>
+            </form>
+
+            <div class="forgot-password">
+              <a href="#" id="forgot-pass">Passwort vergessen?</a>
+            </div>
+
+            <div class="already-member">
+              <p>
+                Nicht Mitglied bei Webgalerie?
+                <a href="#" id="inner-signup-form">Hier registrieren</a>
+              </p>
             </div>
           </div>
         </div>
-      </section>
-
-      <!--! PERSONAL MENU SECTION -->
-      <section class="personal-container hidden">
-        <div class="container">
-          <ul class="personal-menu">
-            <li class="active-menu">Meine Uploads</li>
-            <li>Meine Favoriten</li>
-          </ul>
-        </div>
-      </section>
-
-      <!--! SIGNUP -->
-      <div class="signup-overlay hidden"></div>
-      <div class="signup-wrapper signup-display hidden">
-        <h1>Bei Webgalerie registrieren</h1>
-        <form action="" id="signup-form">
-          <div class="group">
-            <label for="name" id="name-label">Name</label>
-            <input
-              type="text"
-              name="name"
-              id="signup-name"
-              placeholder="Geben Sie Ihren Name"
-            />
-          </div>
-
-          <div class="group">
-            <label for="username" id="username-label">Benutzername</label>
-            <input
-              type="text"
-              name="username"
-              id="signup-username"
-              placeholder="Geben Sie Ihren Benutzername"
-            />
-          </div>
-
-          <div class="group">
-            <label for="password" id="password-label">Passwort</label>
-            <input
-              type="password"
-              name="password"
-              id="signup-password"
-              placeholder="Geben Sie Ihre Passwort"
-            />
-          </div>
-
-          <div class="group">
-            <button type="submit" id="signup" class="btn-primary btn-submit">
-              Registrieren
-            </button>
-          </div>
-        </form>
-        <div class="accept-terms">
-          <p>
-            Mit der Registrierung erfolgt Zustimmung zu den
-            <a href="agb.html">Allgemeinen Geschäftsbedingungen</a> und der
-            <a href="datenschutz.html">Datenschutzerklärung</a>.
-          </p>
-        </div>
-        <div class="already-member">
-          <p>
-            Bereits Mitglied bei Webgalerie?
-            <a href="#" id="inner-login-form">Hier anmelden</a>
-          </p>
-        </div>
-      </div>
-
-      <!--! LOGIN -->
-      <div class="signup-wrapper login-display hidden">
-        <h1>Bei Webgalerie registrieren</h1>
-        <form action="" id="login-form">
-          <div class="group">
-            <label for="username" id="login-username-label">Benutzername</label>
-            <input
-              type="text"
-              name="username"
-              id="login-username"
-              placeholder="Geben Sie Ihren Benutzername"
-            />
-          </div>
-
-          <div class="group">
-            <label for="password" id="login-password-label">Passwort</label>
-            <input
-              type="password"
-              name="password"
-              id="login-password"
-              placeholder="Geben Sie Ihre Passwort"
-            />
-          </div>
-
-          <div class="group">
-            <button type="submit" id="login" class="btn-primary btn-submit">
-              Anmelden
-            </button>
-          </div>
-        </form>
-
-        <div class="forgot-password">
-          <a href="#" id="forgot-pass">Passwort vergessen?</a>
-        </div>
-
-        <div class="already-member">
-          <p>
-            Nicht Mitglied bei Webgalerie?
-            <a href="#" id="inner-signup-form">Hier registrieren</a>
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!--! PICTURE SECTION -->
-
-    <section class="pictures hidden">
-      <div class="container">
-        <h1>Beliebtesten Bilder</h1>
-        <div class="gallery-wrapper">
-          <div class="gallery-container w-2 h-2">
-            <div class="gallery-item">
-              <div class="image">
-                <img
-                  src="https://source.unsplash.com/Fp7qRMsOB0s/"
-                  alt="nature"
-                />
+        <!--! PICTURE SECTION -->
+        <section class="images">
+          <div class="container">
+            <div class="gallery-container hidden">
+              <!---->
+              <div class="gallery-item w-1 h-1">
+                <div class="image">
+                  <img src="https://source.unsplash.com/Fp7qRMsOB0s/" alt="" />
+                </div>
+                <div class="controls">
+                  <p><a href="#" class="user">von Benutzer 2</a></p>
+                  <i class="far fa-star"></i>
+                </div>
               </div>
-              <div class="user">
-                <p><a href="#">von Benutzer 2</a></p>
-                <i class="far fa-star"></i>
+
+              <div class="gallery-item w-1 h-1">
+                <div class="image">
+                  <img src="https://source.unsplash.com/Fp7qRMsOB0s/" alt="" />
+                </div>
+                <div class="controls">
+                  <p><a href="#" class="user">von Benutzer 2</a></p>
+                  <i class="far fa-star"></i>
+                </div>
               </div>
+
+              <div class="gallery-item w-1 h-1">
+                <div class="image">
+                  <img src="https://source.unsplash.com/Fp7qRMsOB0s/" alt="" />
+                </div>
+                <div class="controls">
+                  <p><a href="#" class="user">von Benutzer 2</a></p>
+                  <i class="far fa-star"></i>
+                </div>
+              </div>
+              <!---->
             </div>
-          </div>
-
-          <div class="gallery-container h-3">
-            <div class="gallery-item">
-              <div class="image">
-                <img src="./images/img_01.jpg" alt="nature" />
-              </div>
-              <div class="user">
-                <p><a href="#">von Benutzer 11</a></p>
-                <i class="far fa-star"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="gallery-container h-2">
-            <div class="gallery-item">
-              <div class="image">
-                <img
-                  src="https://source.unsplash.com/pgpRhbXJ8YY/"
-                  alt="nature"
-                />
-              </div>
-              <div class="user">
-                <p><a href="#">von Benutzer 1</a></p>
-                <i class="far fa-star"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="gallery-container h-2">
-            <div class="gallery-item">
-              <div class="image">
-                <img
-                  src="https://source.unsplash.com/bjsX5xQRAgo/"
-                  alt="nature"
-                />
-              </div>
-              <div class="user">
-                <p><a href="#">von Benutzer 3</a></p>
-                <i class="far fa-star"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="gallery-container h-4">
-            <div class="gallery-item">
-              <div class="image">
-                <img
-                  src="https://source.unsplash.com/I0bAF8ITe5Y/"
-                  alt="nature"
-                />
-              </div>
-              <div class="user">
-                <p><a href="#">von Benutzer 5</a></p>
-                <i class="far fa-star"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="gallery-container h-3 w-2">
-            <div class="gallery-item">
-              <div class="image">
-                <img
-                  src="https://source.unsplash.com/eDnW0H-dg-k/"
-                  alt="nature"
-                />
-              </div>
-              <div class="user">
-                <p><a href="#">von Benutzer 2</a></p>
-                <i class="far fa-star"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="gallery-container h-3">
-            <div class="gallery-item">
-              <div class="image">
-                <img
-                  src="https://source.unsplash.com/cFDHzhNLTPg/"
-                  alt="nature"
-                />
-              </div>
-              <div class="user">
-                <p><a href="#">von Benutzer 9</a></p>
-                <i class="far fa-star"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="gallery-container w-2 h-2">
-            <div class="gallery-item">
-              <div class="image">
-                <img
-                  src="https://source.unsplash.com/SqT01553Fbg/"
-                  alt="nature"
-                />
-              </div>
-              <div class="user">
-                <p><a href="#">von Benutzer 8</a></p>
-                <i class="far fa-star"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="gallery-container h-3">
-            <div class="gallery-item">
-              <div class="image">
-                <img
-                  src="https://source.unsplash.com/x12AYnW8h_8/"
-                  alt="nature"
-                />
-              </div>
-              <div class="user">
-                <p><a href="#">von Benutzer 7</a></p>
-                <i class="far fa-star"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="gallery-container h-3">
-            <div class="gallery-item">
-              <div class="image">
-                <img
-                  src="https://source.unsplash.com/3yzE1SUfbwY/"
-                  alt="nature"
-                />
-              </div>
-              <div class="user">
-                <p><a href="#">von Benutzer 1</a></p>
-                <i class="far fa-star"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="gallery-container h-2">
-            <div class="gallery-item">
-              <div class="image">
-                <img
-                  src="https://source.unsplash.com/n72XSmc3Rlc/"
-                  alt="nature"
-                />
-              </div>
-              <div class="user">
-                <p><a href="#">von Benutzer 6</a></p>
-                <i class="far fa-star"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="gallery-container h-3">
-            <div class="gallery-item">
-              <div class="image">
-                <img
-                  src="https://source.unsplash.com/-njbxKXL0uk/"
-                  alt="nature"
-                />
-              </div>
-              <div class="user">
-                <p><a href="#">von Benutzer 1</a></p>
-                <i class="far fa-star"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="gallery-container h-2 w-2">
-            <div class="gallery-item">
-              <div class="image">
-                <img src="./images/img_03.jpg" alt="71-spar" />
-              </div>
-              <div class="user">
-                <p><a href="#">von Benutzer 11</a></p>
-                <i class="far fa-star"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="gallery-container h-3 w-2">
-            <div class="gallery-item">
-              <div class="image">
-                <img
-                  src="https://source.unsplash.com/iTzKdV8TNOU/"
-                  alt="71-spar"
-                />
-              </div>
-              <div class="user">
-                <p><a href="#">von Benutzer 11</a></p>
-                <i class="far fa-star"></i>
-              </div>
-            </div>
-          </div>
-
-          <div class="gallery-container h-2">
-            <div class="gallery-item">
-              <div class="image">
-                <img
-                  src="https://source.unsplash.com/djZ9ASWr_fU/"
-                  alt="71-spar"
-                />
-              </div>
-              <div class="user">
-                <p><a href="#">von Benutzer 11</a></p>
-                <i class="far fa-star"></i>
-              </div>
-            </div>
-          </div>
-          <!---->
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-      <div class="container">
-        <section class="footer">
-          <div class="footer-links">
-            <a href="#">Datenschutz</a>
-            <a href="#">AGB</a>
-            <a href="#">Impressum</a>
-          </div>
-          <div><p>&copy; 2020 VW Käfer Webgalerie</p></div>
-          <div class="social">
-            <a href="https://www.facebook.com/"
-              ><i class="fab fa-facebook-square"></i
-            ></a>
-            <a href="https://twitter.com/"
-              ><i class="fab fa-twitter-square"></i
-            ></a>
-            <a href="https://www.instagram.com/"
-              ><i class="fab fa-instagram-square"></i
-            ></a>
           </div>
         </section>
       </div>
-    </footer>
-
-    <script src="./js/main.js"></script>
+      <!-- FOOTER -->
+      <footer>
+        <div class="container">
+          <section class="footer">
+            <div class="footer-links">
+              <a href="#">Datenschutz</a>
+              <a href="#">AGB</a>
+              <a href="#">Impressum</a>
+            </div>
+            <div><p>&copy; 2020 VW Käfer Webgalerie</p></div>
+            <div class="social">
+              <a href="https://www.facebook.com/"
+                ><i class="fab fa-facebook-square"></i
+              ></a>
+              <a href="https://twitter.com/"
+                ><i class="fab fa-twitter-square"></i
+              ></a>
+              <a href="https://www.instagram.com/"
+                ><i class="fab fa-instagram-square"></i
+              ></a>
+            </div>
+          </section>
+        </div>
+      </footer>
+    </div>
   </body>
 </html>
