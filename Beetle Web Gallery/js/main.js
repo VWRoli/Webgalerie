@@ -3,40 +3,118 @@
 //? Accounts
 const klausImages = [
   {
-    imgLink: `<img src="https://source.unsplash.com/Fp7qRMsOB0s/" alt=""/>`,
+    imgLink: `https://source.unsplash.com/Fp7qRMsOB0s`,
     owner: 'klaus',
-    width: 2,
-    height: 2,
+    width: 1,
+    height: 1,
   },
   {
-    imgLink: `<img src="https://source.unsplash.com/pgpRhbXJ8YY/" alt=""/>`,
+    imgLink: `https://source.unsplash.com/pgpRhbXJ8YY/`,
+    owner: 'klaus',
+    width: 1,
+    height: 1,
+  },
+  {
+    imgLink: `https://source.unsplash.com/I0bAF8ITe5Y/`,
     owner: 'klaus',
     width: 1,
     height: 2,
   },
   {
-    imgLink: `<img src="https://source.unsplash.com/I0bAF8ITe5Y/" alt=""/>`,
+    imgLink: `https://source.unsplash.com/eDnW0H-dg-k/`,
     owner: 'klaus',
     width: 1,
-    height: 4,
+    height: 1,
   },
   {
-    imgLink: `<img src="https://source.unsplash.com/eDnW0H-dg-k/" alt=""/>`,
-    owner: 'klaus',
-    width: 2,
-    height: 3,
-  },
-  {
-    imgLink: `<img src="https://source.unsplash.com/cFDHzhNLTPg/" alt=""/>`,
+    imgLink: `https://source.unsplash.com/cFDHzhNLTPg/`,
     owner: 'klaus',
     width: 1,
-    height: 3,
+    height: 1,
   },
   {
-    imgLink: `<img src="https://source.unsplash.com/SqT01553Fbg/" alt=""/>`,
+    imgLink: `https://source.unsplash.com/SqT01553Fbg/`,
     owner: 'klaus',
+    width: 1,
+    height: 1,
+  },
+];
+
+const marthaImages = [
+  {
+    imgLink: `https://source.unsplash.com/hVk6pIFbW9o`,
+    owner: 'martha',
     width: 2,
     height: 2,
+  },
+  {
+    imgLink: `https://source.unsplash.com/3yzE1SUfbwY/`,
+    owner: 'martha',
+    width: 1,
+    height: 2,
+  },
+  {
+    imgLink: `https://source.unsplash.com/6Woj_fIzn5g/`,
+    owner: 'martha',
+    width: 3,
+    height: 2,
+  },
+];
+
+const danielImages = [
+  {
+    imgLink: `https://source.unsplash.com/wyI1e5VM96o`,
+    owner: 'daniel',
+    width: 1,
+    height: 2,
+  },
+  {
+    imgLink: `https://source.unsplash.com/vSgINvbunfo/`,
+    owner: 'daniel',
+    width: 1,
+    height: 1,
+  },
+  {
+    imgLink: `https://source.unsplash.com/iO4QILyNEbE/`,
+    owner: 'daniel',
+    width: 1,
+    height: 1,
+  },
+  {
+    imgLink: `https://source.unsplash.com/Bnk9CwTVtL8/`,
+    owner: 'daniel',
+    width: 1,
+    height: 1,
+  },
+  {
+    imgLink: `https://source.unsplash.com/iTzKdV8TNOU/`,
+    owner: 'daniel',
+    width: 1,
+    height: 2,
+  },
+  {
+    imgLink: `https://source.unsplash.com/WWwyh_zt6lk/`,
+    owner: 'daniel',
+    width: 1,
+    height: 1,
+  },
+  {
+    imgLink: `https://source.unsplash.com/5D6HXfo-uZs/`,
+    owner: 'daniel',
+    width: 1,
+    height: 1,
+  },
+  {
+    imgLink: `https://source.unsplash.com/ol1dX9NkjEI/`,
+    owner: 'daniel',
+    width: 1,
+    height: 1,
+  },
+  {
+    imgLink: `https://source.unsplash.com/nMtmO54EK2Y/`,
+    owner: 'daniel',
+    width: 1,
+    height: 1,
   },
 ];
 
@@ -50,8 +128,10 @@ class CreateAccount {
 }
 const roland = new CreateAccount('roland', 'roland', 1234);
 const klaus = new CreateAccount('klaus', 'klaus89', 4321, klausImages);
+const martha = new CreateAccount('martha', 'martha', 1111, marthaImages);
+const daniel = new CreateAccount('daniel', 'daniel', 2222, danielImages);
 
-const accounts = [roland, klaus];
+const accounts = [roland, klaus, martha, daniel];
 
 /////////////////////////////////////////////////////
 let counter = 1;
@@ -87,6 +167,7 @@ const loginMessage = document.querySelector('.login-message');
 
 //Image gallery
 const galleryContainer = document.querySelector('.gallery-container');
+const landing = document.querySelector('.landing');
 
 //Change BG every 10 seconds
 setInterval(function () {
@@ -134,12 +215,10 @@ const switchforms = () => {
   loginDisplay.classList.toggle('hidden');
 };
 innerLogin.addEventListener('click', function (e) {
-  //e.preventDefault();
   switchforms();
 });
 
 innerSignup.addEventListener('click', function (e) {
-  //e.preventDefault();
   switchforms();
 });
 
@@ -149,7 +228,7 @@ innerSignup.addEventListener('click', function (e) {
 
 submitSignupBtn.addEventListener('click', function (e) {
   e.preventDefault();
-  let account3;
+  let newAccount;
   //Fill in the form
   if (
     submitSignupName.value === '' &&
@@ -161,19 +240,15 @@ submitSignupBtn.addEventListener('click', function (e) {
     submitSignupPass.style.background = `var(--tertiary-hover-btn-color)`;
   } else {
     //If form filled, create account
-    account3 = new CreateAccount(
+    newAccount = new CreateAccount(
       submitSignupName.value,
       submitSignupUsername.value,
       submitSignupPass.value
     );
-    console.log('You can Log in now');
     loginMessage.classList.remove('hidden');
     signupDisplay.classList.add('hidden');
-    //signupDisplay.textContent = 'Sie können sich jetzt anmelden';
 
-    console.log(account3);
-    accounts.push(account3);
-    console.log(accounts);
+    accounts.push(newAccount);
     setTimeout(function () {
       signupOverlay.classList.add('hidden');
       signupDisplay.classList.add('hidden');
@@ -201,10 +276,9 @@ const checkLoginCred = function () {
   );
 
   if (currentAccount.password.toString() === inputLoginPassword.value) {
-    console.log('correct');
     toggleUI(currentAccount);
-    console.log(currentAccount);
   } else {
+    //todo /////////////////////////////////////////////
     console.log('incorrect pass');
   }
 };
@@ -220,7 +294,14 @@ const toggleUI = (acc) => {
   loginContainer.classList.toggle('hidden');
   // Show personal menu
   personalMenu.classList.toggle('hidden');
-  showImages();
+  //show pictures showcase
+  if (personalMenu.classList.contains('hidden')) {
+    showcase.classList.remove('hidden');
+    galleryContainer.classList.add('hidden');
+    landing.style.height = '100vh';
+  } else {
+    showImages(acc.images);
+  }
   // Show Welcome message and logout button
   welcome.classList.toggle('hidden');
   if (acc === undefined) return;
@@ -232,7 +313,25 @@ btnLogout.addEventListener('click', function (e) {
   toggleUI();
 });
 
-const showImages = function () {
+const showImages = function (images) {
+  galleryContainer.innerHTML = '';
   galleryContainer.classList.remove('hidden');
-  document.querySelector('.landing').style.height = 'fit-content';
+  landing.style.height = 'fit-content';
+
+  if (images === undefined) return;
+  images.forEach((img) => console.log(img.imgLink));
+
+  images.forEach(function (image) {
+    const html = `
+    <div class="gallery-item w-${image.width} h-${image.height}">
+    <div class="image">
+    <img src="${image.imgLink}" alt="" />
+    </div>
+    <div class="controls">
+    <p><a href="#" class="user">${image.owner}</a></p>
+    <i class="far fa-star"></i>
+    </div>
+    </div>`;
+    galleryContainer.insertAdjacentHTML('beforeend', html);
+  });
 };
