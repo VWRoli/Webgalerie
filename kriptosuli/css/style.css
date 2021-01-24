@@ -1,16 +1,3 @@
-/*
-      header dark grey #3c3c3c
-      light grey #808080;
-      blue #1a7391;
-      light blue #458da5
-      footer color #a6a6a6
-        link color #00abed hover #ff644a
-        image background EFFAFF
-        fb button color #3b5998
-        twitter btn #00aced
-        google #dd4b39
-email 848484
-*/
 :root {
   --primaryColor: #fff;
   --darkColor: #3c3c3c;
@@ -234,46 +221,17 @@ nav {
   padding: 0;
   margin: 5px 0;
 }
-.timedate {
+/* .timedate {
   padding: 0;
   margin: 0;
   font-size: 80%;
-}
-#myBtn {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-  z-index: 99;
-  height: 48px;
-  width: 48px;
-  border: 2px solid #000;
-  outline: none;
-  background-color: #fff;
-  color: #000;
-  cursor: pointer;
-  padding: 8px 10px;
-  border-radius: 28px;
-  font-size: 1.2em;
-  opacity: 0.5;
-}
-
-#myBtn:hover {
-  background-color: #555;
-  opacity: 0.5;
-}
-/*---------------------POST SECTION--------------------*/
+} */
+/************MAIN ARTICLE SECTION*************/
 .post-wrapper {
-  float: left;
-  max-width: 70%;
-  margin: 0;
-  padding: 20px;
-  font-weight: 400;
   line-height: 1.6;
 }
 .post-wrapper h1 {
   text-align: center;
-  font-size: 200%;
 }
 .post-wrapper img {
   display: block;
@@ -281,28 +239,6 @@ nav {
   max-width: 100%;
 }
 
-.sidebar-wrapper {
-  float: right;
-  max-width: 29%;
-  border-left: 1px solid #e8e8e8;
-  margin: 0;
-  padding: 0;
-}
-.sidebar-wrapper img {
-  max-width: 98%;
-  margin-left: 5px;
-  opacity: 1;
-}
-.related-posts h3,
-h4 {
-  padding-left: 10px;
-}
-.related-posts h4 {
-  margin: 10px 0;
-}
-.ticker {
-  margin: 5px;
-}
 #smartcontract {
   margin-left: 20px;
   line-height: 2.2;
@@ -312,126 +248,85 @@ h4 {
   margin-top: 5px;
   margin-bottom: 30px;
 }
-.next-section {
-  margin: 0;
-  padding: 0;
-  clear: both;
-}
-.under-post1 {
-  float: left;
-  max-width: 49%;
-  margin: 0;
-}
-.under-post2 {
-  float: right;
-  max-width: 49%;
-  margin: 0;
-}
-.under-post2 h4,
-.under-post1 h4 {
-  margin: 10px 0;
-}
 .source {
   font-style: italic;
-  font-size: 0.7em;
-  color: grey;
-}
-.post-footer {
-  display: block;
-  border-top: 1px solid #e8e8e8;
-  border-bottom: 1px solid #e8e8e8;
-  height: auto;
-  max-width: 100%;
-  overflow: auto;
-  padding: 0 15px;
-}
-.post-footer p {
-  display: block;
-  margin: 6px 0;
-  float: right;
-  font-size: 0.85em;
-  color: grey;
+  font-size: 0.7rem;
 }
 
-#author {
-  float: left;
-  max-width: 50%;
+/************POST FOOTER SECTION*************/
+.post-footer {
+  border-top: 1px solid var(--footerBg);
+  border-bottom: 1px solid var(--footerBg);
+  overflow: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--footerBg);
 }
-#date {
-  float: right;
-  max-width: 50%;
-  text-align: right;
+.post-footer p {
+  font-size: 0.85em;
 }
-.fb-like {
-  padding: 0 15px;
+.share {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 #fbshare {
   background-color: #3b5998;
   display: block;
   padding: 2px 40px;
-  margin-left: 35px;
-  float: left;
-  opacity: 1;
   transition: opacity 0.2s ease-in-out;
-  margin-top: 4px;
 }
 #tweet {
   background-color: #00aced;
   display: block;
   padding: 2px 40px;
-  margin: 0;
-  float: left;
-  opacity: 1;
   transition: opacity 0.2s ease-in-out;
-  margin-top: 4px;
 }
 #google {
   background-color: #dd4b39;
   display: block;
   padding: 2px 40px;
-  margin: 0;
-  float: left;
-  opacity: 1;
   transition: opacity 0.2s ease-in-out;
-  margin-top: 4px;
 }
 #email {
   background-color: #848484;
   display: block;
   padding: 4.5px 40px;
-  margin: 0;
-  float: left;
-  opacity: 1;
   transition: opacity 0.2s ease-in-out;
-  margin-top: 4px;
 }
-
-.ticker2 {
-  display: none;
+/************UNDERPOSTS SECTION*************/
+.next-post-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
-
-.rebrand {
+.next-post-wrapper h4 {
+  text-align: center;
+  margin-top: 0;
+}
+/*TODO-----------------------------------------------------*/
+/* .rebrand {
   background-color: rgba(255, 210, 0, 0.3);
   border: 2px solid #ffba00;
   border-radius: 8px;
   padding: 15px;
   text-align: center;
-}
+} */
 
-/*---------------------ALTCOIN SECTION--------------------*/
+/************ALTCOIN SECTION*************/
 #alt-header {
   text-align: center;
-  clear: both;
 }
-table,
-tr,
-td,
+.alt-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.alt-wrapper h4 {
+  font-size: 1.2rem;
+  margin-top: 0;
+  padding-left: 0;
+}
 img {
   max-width: 100%;
-  height: auto;
-}
-table h4 {
-  margin: 10px 0;
 }
 
 /************FOOTER*************/
