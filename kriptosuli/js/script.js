@@ -3,11 +3,8 @@
 const burgerIcon = document.querySelector('#burger-icon');
 const navbarEl = document.querySelector('.navbar');
 
-// const themeBtns = document.querySelector('.theme-btns');
 const themeStyle = document.querySelector('#theme-style');
 const themeBtn = document.querySelector('.theme-btn');
-// const darkBtn = document.querySelector('.fa-moon');
-// const lightBtn = document.querySelector('.fa-sun');
 
 //Toggle navbar
 burgerIcon.addEventListener('click', function () {

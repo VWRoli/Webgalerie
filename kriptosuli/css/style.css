@@ -150,14 +150,6 @@ nav {
   display: flex;
   align-content: center;
 }
-/* 
-.theme-btns i:hover {
-  cursor: pointer;
-  color: var(--linkColor);
-}
-.theme-btn {
-  color: var(--darkColor);
-} */
 input[type='checkbox'] {
   position: relative;
   width: 2rem;
@@ -193,6 +185,29 @@ input:checked[type='checkbox']::before {
 .fa-moon {
   margin: 3px;
   color: #000;
+}
+/************MARKET PRICE SECTION*************/
+.market-price-wrapper h2 {
+  margin: 0.25rem 0;
+  text-align: center;
+}
+.table-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+thead {
+  background-color: var(--lightBorder);
+}
+.tr-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  border-bottom: 1px solid var(--lightBorder);
+  text-align: center;
+  padding: 0.5rem 0;
+}
+.coin-supply,
+.supply-header {
+  grid-column: span 2;
 }
 /************MAIN ARTICLE SECTION*************/
 
