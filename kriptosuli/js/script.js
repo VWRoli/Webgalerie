@@ -3,10 +3,11 @@
 const burgerIcon = document.querySelector('#burger-icon');
 const navbarEl = document.querySelector('.navbar');
 
-const themeBtns = document.querySelector('.theme-btns');
+// const themeBtns = document.querySelector('.theme-btns');
 const themeStyle = document.querySelector('#theme-style');
-const darkBtn = document.querySelector('.fa-moon');
-const lightBtn = document.querySelector('.fa-sun');
+const themeBtn = document.querySelector('.theme-btn');
+// const darkBtn = document.querySelector('.fa-moon');
+// const lightBtn = document.querySelector('.fa-sun');
 
 //Toggle navbar
 burgerIcon.addEventListener('click', function () {
@@ -14,28 +15,22 @@ burgerIcon.addEventListener('click', function () {
 });
 
 //Change theme
-//get from localstorage
 let theme = localStorage.getItem('theme');
 
-themeBtns.addEventListener('click', function (e) {
-  if (e.target.classList.contains('theme-btn')) {
-    const mode = e.target.dataset.mode;
-    setTheme(mode);
-  }
-});
-
-const setTheme = (mode) => {
-  if (mode === 'light') {
-    themeStyle.href = 'css/style.css';
-    darkBtn.classList.remove('theme-active');
-    lightBtn.classList.add('theme-active');
-  }
-  if (mode === 'dark') {
+const setTheme = () => {
+  if (themeBtn.checked) {
     themeStyle.href = 'css/dark.css';
-    lightBtn.classList.remove('theme-active');
-    darkBtn.classList.add('theme-active');
+    localStorage.setItem('theme', 'true');
+  } else {
+    themeStyle.href = 'css/style.css';
+    localStorage.setItem('theme', 'false');
   }
-  localStorage.setItem('theme', mode);
 };
-//save to localStorage
-theme === null ? setTheme('light') : setTheme(theme);
+//Get theme from localstorage
+if (theme === 'true') themeBtn.setAttribute('checked', 'checked');
+setTheme();
+
+//Change theme with button
+themeBtn.addEventListener('change', function () {
+  setTheme();
+});
