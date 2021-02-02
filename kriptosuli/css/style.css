@@ -9,6 +9,8 @@
   --footerText: #696969;
   --lightText: #e8e8e8;
   --darkText: #000;
+  --tableHeader: #696969;
+  --tableRow: #e8e8e8;
 }
 /************GLOBAL*************/
 body {
@@ -199,7 +201,11 @@ input:checked[type='checkbox']::before {
   flex-direction: column;
 }
 thead {
-  background-color: var(--lightBorder);
+  background-color: var(--tableHeader);
+  color: var(--lightText);
+}
+.table-body tr:nth-child(even) {
+  background: var(--tableRow);
 }
 .tr-grid {
   display: grid;
