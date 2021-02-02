@@ -227,6 +227,18 @@ thead {
 .negative {
   color: #ff4500;
 }
+.market-table {
+  transition: visibility 0.5s, opacity 0.5s;
+}
+.visibility {
+  visibility: collapse;
+  opacity: 0;
+}
+.hide-market-btn {
+  text-align: center;
+  border: 1px solid var(--lightBorder);
+  cursor: pointer;
+}
 /************MAIN ARTICLE SECTION*************/
 
 .main-article-container {
