@@ -207,6 +207,11 @@ thead {
   border-bottom: 1px solid var(--lightBorder);
   text-align: center;
   padding: 0.5rem 0;
+  align-items: center;
+}
+.coin-icon {
+  max-width: 30px;
+  margin: auto;
 }
 .coin-supply,
 .supply-header {
