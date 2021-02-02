@@ -105,12 +105,13 @@ nav {
   background: var(--tertiary);
 }
 .menu-item {
-  padding: 0 2rem;
   cursor: pointer;
   position: relative;
 }
 .menu-item a {
   color: var(--primaryColor);
+  display: inline-block;
+  padding: 0 2rem;
 }
 .menu-item a:hover {
   color: var(--primaryColor);
