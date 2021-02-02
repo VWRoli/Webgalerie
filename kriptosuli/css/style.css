@@ -213,9 +213,19 @@ thead {
   max-width: 30px;
   margin: auto;
 }
+.coin-price {
+  color: #476dbe;
+  font-weight: 600;
+}
 .coin-supply,
 .supply-header {
   grid-column: span 2;
+}
+.positive {
+  color: #39b385;
+}
+.negative {
+  color: #ff4500;
 }
 /************MAIN ARTICLE SECTION*************/
 
