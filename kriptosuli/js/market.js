@@ -15,15 +15,27 @@ hideMarketBtn.addEventListener('click', function () {
 //CoinGecko API
 //Get data from CoinGecko
 const getCoinMarkets = async function () {
-  const res = await fetch(
-    `https://api.coingecko.com/api/v3/coins/markets?vs_currency=huf&order=market_cap_desc&per_page=10&page=1&sparkline=false`
-  );
-  //if (!res.ok) throw new Error('Problem getting coin data');
+  try {
+    const res = await fetch(
+      `1https://api.coingecko.com/api/v3/coins/markets?vs_currency=huf&order=market_cap_desc&per_page=10&page=1&sparkline=false`
+    );
+    if (!res.ok)
+      throw new Error(
+        'Problem getting coin data. Please refresh the page, or try again later!'
+      );
 
-  const data = await res.json();
-  renderCoinData(data);
+    const data = await res.json();
+    renderCoinData(data);
+  } catch (err) {
+    renderError(`${err.message}`);
+  }
 };
 getCoinMarkets();
+
+//Render error
+const renderError = function (msg) {
+  tableBody.insertAdjacentText('beforeend', msg);
+};
 
 //Render data
 const renderCoinData = function (coins) {
