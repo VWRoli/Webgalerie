@@ -60,6 +60,9 @@ table img:hover {
   color: var(--linkColor);
   pointer-events: none;
 }
+.selected {
+  background-color: var(--tertiary);
+}
 /************NAVBAR*************/
 nav {
   background-color: var(--darkColor);
