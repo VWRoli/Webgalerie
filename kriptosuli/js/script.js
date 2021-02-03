@@ -43,6 +43,11 @@ const obsCallback = function (entries, observer) {
          <a href="#top"><i class="fas fa-angle-double-up fa-2x"></i></a>
         </div> `;
       body.insertAdjacentHTML('afterbegin', html);
+      //Smooth scroll
+      document.querySelector('.to-top').addEventListener('click', function (e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
     } else if (entry.isIntersecting) {
       const toTopBtn = document.querySelector('.to-top');
       if (!toTopBtn) return;
@@ -65,11 +70,15 @@ const footer = document.querySelector('footer');
 const mediumArticles = document.querySelectorAll('.medium-article');
 let articleCounter = 5;
 
-const articleCallback = function (entries, observer) {
+const articleCallback = function (entries) {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       articleCounter++;
-      if (mediumArticles[articleCounter] === undefined) return;
+
+      if (mediumArticles[articleCounter] === undefined) {
+        articleObserver.unobserve(footer);
+        return;
+      }
       mediumArticles[articleCounter].classList.remove('hidden-articles');
     }
   });
