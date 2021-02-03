@@ -313,11 +313,11 @@ thead {
   padding: 0;
   margin: 5px 0;
 }
-/* .timedate {
-  padding: 0;
-  margin: 0;
-  font-size: 80%;
-} */
+.hidden-articles {
+  opacity: 0;
+  display: none;
+  transition: 0.5s;
+}
 /************MAIN ARTICLE SECTION*************/
 .post-wrapper {
   line-height: 1.6;

@@ -7,6 +7,7 @@ const themeStyle = document.querySelector('#theme-style');
 const themeBtn = document.querySelector('.theme-btn');
 
 const body = document.querySelector('body');
+const slogan = document.querySelector('#slogan-cont');
 
 //Toggle navbar
 burgerIcon.addEventListener('click', function () {
@@ -35,7 +36,6 @@ themeBtn.addEventListener('change', function () {
 });
 
 //Scroll to top button with Intersection observer API
-const slogan = document.querySelector('#slogan-cont');
 const obsCallback = function (entries, observer) {
   entries.forEach((entry) => {
     if (!entry.isIntersecting) {
@@ -56,5 +56,33 @@ const obsOptions = {
   threshold: 0,
 };
 
-const observer = new IntersectionObserver(obsCallback, obsOptions);
-observer.observe(slogan);
+const scrollToTopObserver = new IntersectionObserver(obsCallback, obsOptions);
+scrollToTopObserver.observe(slogan);
+
+////////////////////////////////////////////////////////////////////////
+//Infinite scroll on main page
+const footer = document.querySelector('footer');
+const mediumArticles = document.querySelectorAll('.medium-article');
+let articleCounter = 5;
+
+const articleCallback = function (entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      articleCounter++;
+      if (mediumArticles[articleCounter] === undefined) return;
+      mediumArticles[articleCounter].classList.remove('hidden-articles');
+    }
+  });
+};
+
+const articleOptions = {
+  root: null,
+  threshold: 0.5,
+};
+
+const articleObserver = new IntersectionObserver(
+  articleCallback,
+  articleOptions
+);
+
+articleObserver.observe(footer);
