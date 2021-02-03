@@ -193,6 +193,7 @@ input:checked[type='checkbox']::before {
   color: #000;
 }
 /************MARKET PRICE SECTION*************/
+
 .market-price-wrapper h2 {
   margin: 0.25rem 0;
   text-align: center;
@@ -390,6 +391,7 @@ thead {
 .next-post-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
 }
 .next-post-wrapper h4 {
   text-align: center;
@@ -411,6 +413,7 @@ thead {
 .alt-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
 }
 .alt-wrapper h4 {
   font-size: 1.2rem;
@@ -459,24 +462,7 @@ footer ul li a {
 }
 /************MEDIA QUERIES*************/
 
-@media (max-width: 940px) {
-  .menu-item {
-    padding: 0 1rem;
-  }
-  .slogan-text {
-    display: none;
-  }
-  #slogan {
-    display: flex;
-    justify-content: center;
-    padding: 0.5rem;
-  }
-  .social {
-    padding: 0 2rem;
-  }
-}
-
-@media (max-width: 760px) {
+@media (max-width: 960px) {
   .nav-burger {
     display: block;
   }
@@ -505,6 +491,26 @@ footer ul li a {
   .active-nav {
     display: block;
   }
+  .menu-item {
+    padding: 0 1rem;
+  }
+  .slogan-text {
+    display: none;
+  }
+  #slogan {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+  .social {
+    padding: 0 2rem;
+  }
+  .alt-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 760px) {
   .main-article {
     grid-column: span 12;
   }
@@ -518,6 +524,16 @@ footer ul li a {
   .med-img {
     display: none;
   }
+  .tr-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .coin-supply,
+  .supply-header {
+    display: none;
+  }
+  .post-footer {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 550px) {
@@ -527,6 +543,27 @@ footer ul li a {
   }
   .main-article h1 {
     font-size: 1.5rem;
+  }
+  .tr-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .coin-symbol,
+  .symbol-header {
+    display: none;
+  }
+  .coin-price,
+  .price-header {
+    grid-column: span 2;
+  }
+  .next-post-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .alt-wrapper {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+  .alt-wrapper div {
+    text-align: center;
   }
 }
 
@@ -538,5 +575,30 @@ footer ul li a {
   }
   .secondary-article {
     margin-right: 0;
+  }
+  .medium-article {
+    text-align: center;
+    grid-template-columns: 1fr;
+  }
+  .post-info {
+    padding-left: 0;
+  }
+  .tr-grid {
+    grid-template-columns: repeat(8, 1fr);
+  }
+  .coin-name,
+  .name-header,
+  .coin-price-change,
+  .price-change-header {
+    grid-column: span 2;
+  }
+  .share {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+  footer ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
   }
 }
