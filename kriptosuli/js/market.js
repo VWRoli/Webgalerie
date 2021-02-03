@@ -8,7 +8,6 @@ const hideMarketBtn = document.querySelector('.hide-market-btn');
 
 //Toggle market price table
 hideMarketBtn.addEventListener('click', function () {
-  if (hideMarketBtn === null) return;
   marketTable.classList.toggle('visibility');
 });
 ////////////////////////////////////////////////////////////
@@ -17,7 +16,7 @@ hideMarketBtn.addEventListener('click', function () {
 const getCoinMarkets = async function () {
   try {
     const res = await fetch(
-      `1https://api.coingecko.com/api/v3/coins/markets?vs_currency=huf&order=market_cap_desc&per_page=10&page=1&sparkline=false`
+      `https://api.coingecko.com/api/v3/coins/markets?vs_currency=huf&order=market_cap_desc&per_page=10&page=1&sparkline=false`
     );
     if (!res.ok)
       throw new Error(

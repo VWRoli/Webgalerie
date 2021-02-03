@@ -6,6 +6,8 @@ const navbarEl = document.querySelector('.navbar');
 const themeStyle = document.querySelector('#theme-style');
 const themeBtn = document.querySelector('.theme-btn');
 
+const body = document.querySelector('body');
+
 //Toggle navbar
 burgerIcon.addEventListener('click', function () {
   navbarEl.classList.toggle('active-nav');
@@ -31,3 +33,28 @@ setTheme();
 themeBtn.addEventListener('change', function () {
   setTheme();
 });
+
+//Scroll to top button with Intersection observer API
+const slogan = document.querySelector('#slogan-cont');
+const obsCallback = function (entries, observer) {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      const html = `<div class="to-top">
+         <a href="#top"><i class="fas fa-angle-double-up fa-2x"></i></a>
+        </div> `;
+      body.insertAdjacentHTML('afterbegin', html);
+    } else if (entry.isIntersecting) {
+      const toTopBtn = document.querySelector('.to-top');
+      if (!toTopBtn) return;
+      toTopBtn.remove();
+    }
+  });
+};
+
+const obsOptions = {
+  root: null,
+  threshold: 0,
+};
+
+const observer = new IntersectionObserver(obsCallback, obsOptions);
+observer.observe(slogan);
