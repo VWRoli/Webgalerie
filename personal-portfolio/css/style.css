@@ -74,17 +74,17 @@ nav {
   border-radius: 10px;
   padding: 0.5rem 1rem;
   background-color: var(--mainColor);
-  color: var(--secondaryColor);
   cursor: pointer;
   margin-left: auto;
   outline: none;
 }
-#resume:hover {
+#resume a {
+  color: var(--secondaryColor);
+}
+#resume:hover,
+#resume:hover a {
   color: var(--hoverColor);
   border-color: var(--hoverColor);
-}
-.mobile-resume {
-  display: none;
 }
 /*? ----- SHOWCASE -----*/
 #showcase {
@@ -360,11 +360,7 @@ nav {
     display: none;
   }
   #resume {
-    display: none;
-  }
-  .mobile-resume {
-    display: block;
-    background-color: #f5465d;
+    margin: auto;
   }
   .active {
     display: block;
