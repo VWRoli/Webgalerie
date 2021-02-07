@@ -211,7 +211,7 @@ thead {
 }
 .tr-grid {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(10, 1fr);
   border-bottom: 1px solid var(--lightBorder);
   text-align: center;
   padding: 0.5rem 0;
@@ -226,7 +226,9 @@ thead {
   font-weight: 600;
 }
 .coin-supply,
-.supply-header {
+.supply-header,
+.price-header,
+.coin-price {
   grid-column: span 2;
 }
 .positive {
@@ -525,7 +527,7 @@ footer ul li a {
     display: none;
   }
   .tr-grid {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(8, 1fr);
   }
   .coin-supply,
   .supply-header {
@@ -548,13 +550,12 @@ footer ul li a {
     grid-template-columns: repeat(6, 1fr);
   }
   .coin-symbol,
-  .symbol-header {
+  .symbol-header,
+  .coin-marketcap,
+  .marketcap-header {
     display: none;
   }
-  .coin-price,
-  .price-header {
-    grid-column: span 2;
-  }
+
   .next-post-wrapper {
     grid-template-columns: 1fr;
   }

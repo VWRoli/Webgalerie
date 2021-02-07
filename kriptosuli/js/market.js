@@ -47,8 +47,9 @@ const renderCoinData = function (coins) {
     //Price change color
     const type = coin.price_change_percentage_24h > 0 ? `positive` : `negative`;
 
-    //Format supply
-    const supply = supplyFormatter(coin.circulating_supply);
+    //Format supply and market cap
+    const supply = numberFormatter(coin.circulating_supply);
+    const marketcap = numberFormatter(coin.market_cap);
 
     //Display table
     const html = `
@@ -59,6 +60,7 @@ const renderCoinData = function (coins) {
        <td class="coin-name">${coin.name}</td>
        <td class="coin-price">${price}</td>
        <td class="coin-price-change ${type}">${priceChange}</td>
+       <td class="coin-marketcap">${marketcap}</td>
        <td class="coin-supply">${supply} ${coin.symbol.toUpperCase()}</td>
       </tr>
       `;
@@ -66,8 +68,8 @@ const renderCoinData = function (coins) {
   });
 };
 //Formatter functions
-//Format supply
-const supplyFormatter = (supply) => {
+//Format supply and marketcap
+const numberFormatter = (supply) => {
   const formattedSupply = new Intl.NumberFormat('hu-HU', {
     notation: 'compact',
     compactDisplay: 'long',
