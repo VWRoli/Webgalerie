@@ -202,10 +202,14 @@ input:checked[type='checkbox']::before {
   display: flex;
   flex-direction: column;
 }
-thead {
+.thead {
   background-color: var(--tableHeader);
   color: var(--lightText);
 }
+.thead i {
+  cursor: pointer;
+}
+
 .table-body tr:nth-child(even) {
   background: var(--tableRow);
 }
@@ -249,6 +253,7 @@ thead {
   border: 1px solid var(--lightBorder);
   cursor: pointer;
 }
+
 /************MAIN ARTICLE SECTION*************/
 
 .main-article-container {
