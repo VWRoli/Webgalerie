@@ -112,12 +112,12 @@ const buildTableData = (coin) => {
 //Sorting table data
 function sortTable(e) {
   const clicked = e.target.closest('th');
-  console.dir(clicked);
   let columnClicked =
     e.target.closest('th').dataset.column || e.target.dataset.column;
-  console.log(columnClicked);
-  let columnOrder = e.target.dataset.order;
+  let columnOrder =
+    e.target.closest('th').dataset.order || e.target.dataset.order;
 
+  //Add sorted by class
   sortedBy(clicked);
   //Sorting
   if (columnOrder === 'desc') {
