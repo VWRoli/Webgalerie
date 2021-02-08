@@ -16,6 +16,7 @@ hideMarketBtn.addEventListener('click', function () {
 //Get data from CoinGecko
 const getCoinMarkets = async function () {
   try {
+    renderSpinner();
     const res = await fetch(
       `https://api.coingecko.com/api/v3/coins/markets?vs_currency=huf&order=market_cap_desc&per_page=10&page=1&sparkline=false`
     );
@@ -42,6 +43,7 @@ function renderCoinData(coins) {
   //Sirting table
   tableHeader.addEventListener('click', sortTable.bind(coins));
   //Render coins to display
+  tableBody.innerHTML = ''; //todo ???
   coins.forEach(buildTableData);
 }
 //Formatter functions
@@ -107,8 +109,11 @@ const buildTableData = (coin) => {
 
 //Sorting table data
 function sortTable(e) {
-  const clicked = e.target;
-  let columnClicked = e.target.dataset.column;
+  const clicked = e.target.closest('th');
+  console.dir(clicked);
+  let columnClicked =
+    e.target.closest('th').dataset.column || e.target.dataset.column;
+  console.log(columnClicked);
   let columnOrder = e.target.dataset.order;
 
   sortedBy(clicked);
@@ -133,6 +138,15 @@ function sortedBy(target) {
     item.firstElementChild.classList.remove('sorted-by')
   );
   //Add sorted class to clicked element
-  const sortTarget = target.firstElementChild;
+  const sortTarget = target.firstElementChild || target;
   sortTarget.classList.add('sorted-by');
+}
+
+//Loading spinner
+function renderSpinner() {
+  const markup = `<div class="spinner">
+  <i class="fas fa-spinner fa-2x"></i>
+  </div> `;
+  tableBody.innerHTML = '';
+  tableBody.insertAdjacentHTML('afterbegin', markup);
 }

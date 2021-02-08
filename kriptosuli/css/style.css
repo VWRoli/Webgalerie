@@ -259,6 +259,28 @@ th {
 .sorted-by {
   color: #00abed;
 }
+/************LOADING SPINNER*************/
+.spinner {
+  margin: 5rem auto;
+  text-align: center;
+}
+.spinner i {
+  height: 2rem;
+  width: 2rem;
+  color: #00abed;
+  transform-origin: center center;
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /************MAIN ARTICLE SECTION*************/
 
 .main-article-container {
