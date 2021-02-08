@@ -253,7 +253,9 @@ input:checked[type='checkbox']::before {
   border: 1px solid var(--lightBorder);
   cursor: pointer;
 }
-
+th {
+  cursor: pointer;
+}
 /************MAIN ARTICLE SECTION*************/
 
 .main-article-container {

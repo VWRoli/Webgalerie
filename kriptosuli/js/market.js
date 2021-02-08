@@ -39,22 +39,7 @@ function renderError(msg) {
 
 //Display coins
 function renderCoinData(coins) {
-  tableHeader.addEventListener('click', function (e) {
-    const clicked = e.target;
-    let columnClicked = e.target.dataset.column;
-    let columnOrder = e.target.dataset.order;
-    //Sorting
-    if (columnOrder === 'desc') {
-      clicked.setAttribute('data-order', 'asc');
-      coins.sort((a, b) => (a[columnClicked] > b[columnClicked] ? 1 : -1));
-    } else {
-      clicked.setAttribute('data-order', 'desc');
-      coins.sort((a, b) => (b[columnClicked] < a[columnClicked] ? -1 : 1));
-    }
-    tableBody.innerHTML = '';
-    //Render sorted coins to display
-    coins.forEach(buildTableData);
-  });
+  tableHeader.addEventListener('click', sortTable.bind(coins));
   //Render coins to display
   coins.forEach(buildTableData);
 }
@@ -118,3 +103,21 @@ const buildTableData = (coin) => {
       `;
   tableBody.insertAdjacentHTML('beforeend', html);
 };
+
+//Sorting table data
+function sortTable(e) {
+  const clicked = e.target;
+  let columnClicked = e.target.dataset.column;
+  let columnOrder = e.target.dataset.order;
+  //Sorting
+  if (columnOrder === 'desc') {
+    clicked.setAttribute('data-order', 'asc');
+    this.sort((a, b) => (a[columnClicked] > b[columnClicked] ? 1 : -1));
+  } else {
+    clicked.setAttribute('data-order', 'desc');
+    this.sort((a, b) => (b[columnClicked] < a[columnClicked] ? -1 : 1));
+  }
+  tableBody.innerHTML = '';
+  //Render sorted coins to display
+  this.forEach(buildTableData);
+}
