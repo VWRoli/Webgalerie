@@ -256,6 +256,9 @@ input:checked[type='checkbox']::before {
 th {
   cursor: pointer;
 }
+.sorted-by {
+  color: #00abed;
+}
 /************MAIN ARTICLE SECTION*************/
 
 .main-article-container {

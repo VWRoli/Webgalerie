@@ -39,6 +39,7 @@ function renderError(msg) {
 
 //Display coins
 function renderCoinData(coins) {
+  //Sirting table
   tableHeader.addEventListener('click', sortTable.bind(coins));
   //Render coins to display
   coins.forEach(buildTableData);
@@ -109,6 +110,8 @@ function sortTable(e) {
   const clicked = e.target;
   let columnClicked = e.target.dataset.column;
   let columnOrder = e.target.dataset.order;
+
+  sortedBy(clicked);
   //Sorting
   if (columnOrder === 'desc') {
     clicked.setAttribute('data-order', 'asc');
@@ -120,4 +123,16 @@ function sortTable(e) {
   tableBody.innerHTML = '';
   //Render sorted coins to display
   this.forEach(buildTableData);
+}
+
+//Add sortedby class
+function sortedBy(target) {
+  //Remove Sorted class from every element
+  const tableHeaderElements = [...tableHeader.firstElementChild.cells];
+  tableHeaderElements.forEach((item) =>
+    item.firstElementChild.classList.remove('sorted-by')
+  );
+  //Add sorted class to clicked element
+  const sortTarget = target.firstElementChild;
+  sortTarget.classList.add('sorted-by');
 }
