@@ -64,7 +64,9 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-
+a {
+  color: var(--mainTextColor);
+}
 /*? Background*/
 
 .bg-circle {
@@ -213,6 +215,9 @@ body {
   cursor: pointer;
   font-size: 1rem;
 }
+.menu-container ul li a {
+  text-decoration: none;
+}
 .active-menu,
 .menu-container ul li:hover {
   background: var(--mainBgColor);
@@ -317,17 +322,20 @@ body {
   display: grid;
   place-items: center;
 }
+.card-img img {
+  width: 100%;
+}
 .card-img i {
   color: #fff;
 }
 .img-1 {
-  background: url(../img/memory.png) no-repeat center/cover;
+  background: url(../img/practice-assistant.png) no-repeat center/cover;
 }
 .img-2 {
   background: url(../img/crypto.png) no-repeat center/cover;
 }
 .img-3 {
-  background: url(../img/fret.png) no-repeat center/cover;
+  background: url(../img/memory-card-game.png) no-repeat center/cover;
 }
 .title {
   font-weight: 500;
@@ -611,6 +619,50 @@ body {
     #f75b5c 50%,
     #f8c8c8 65%,
     #f75b5c 100%
+  );
+}
+
+.seo-tag {
+  background: linear-gradient(
+    to bottom right,
+    #317bb4 0%,
+    #317bb4 35%,
+    #afd0e7 50%,
+    #317bb4 65%,
+    #317bb4 100%
+  );
+  border: 1px solid #fff;
+}
+.seo-tag:hover {
+  background: linear-gradient(
+    to bottom right,
+    #317bb4 0%,
+    #317bb4 35%,
+    #317bb4 50%,
+    #afd0e7 65%,
+    #317bb4 100%
+  );
+}
+.oop-tag {
+  background: linear-gradient(
+    to bottom right,
+    #f7ed5b 0%,
+    #f7ed5b 35%,
+    #fcf9d9 50%,
+    #f7ed5b 65%,
+    #f7ed5b 100%
+  );
+  border: 1px solid #000;
+  color: #000;
+}
+.oop-tag:hover {
+  background: linear-gradient(
+    to bottom right,
+    #f7ed5b 0%,
+    #f7ed5b 35%,
+    #f7ed5b 50%,
+    #fcf9d9 65%,
+    #f7ed5b 100%
   );
 }
 /*? MEDIA */

@@ -53,11 +53,13 @@ const slider = (target) => {
   }
 };
 
-//menu-nav
+//Menu-nav
+//Default active
 mainPageBtn.classList.add('active-menu');
 
+//Add active to clicked
 menuElAll.addEventListener('click', function (e) {
-  const clicked = e.target.closest('li');
+  const clicked = e.target.closest('.menu-btn');
 
   if (!clicked) return;
 
