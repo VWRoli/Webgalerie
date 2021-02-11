@@ -69,3 +69,5 @@ menuElAll.addEventListener('click', function (e) {
   //content slider
   slider(clicked);
 });
+
+//Info/ Description buttons

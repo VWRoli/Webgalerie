@@ -11,7 +11,15 @@
     />
     <script defer src="js/main.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/tags.css" />
     <link rel="stylesheet" type="text/css" id="theme-style" href="" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/favicon-32x32.png"
+    />
     <title>Roland Füst | Personal Portfolio</title>
   </head>
   <body>
@@ -23,11 +31,11 @@
     <div class="bubble-2"></div>
 
     <!--? MODAL -->
-    <div class="overlay"></div>
-    <div class="modal">
+    <div class="overlay hidden"></div>
+    <div class="modal hidden">
       <button class="close-modal"><i class="fas fa-times fa-2x"></i></button>
       <h3>Description:</h3>
-      <ul>
+      <!-- <ul class="project-info-1">
         <li>
           Guitar practice assistant app, with a built in metronome, and
           fretboard memorizer.
@@ -43,6 +51,18 @@
         <li>
           The fretboard memorizer is a simple guessing game built with Vanilla
           JS.
+        </li>
+      </ul> -->
+
+      <!-- <ul class="project-info-2">
+        <li>Live cryptocurrency tracker using the Coingecko API</li>
+        <li>Fully Responsive Website</li>
+        <li>SEO friendly pages</li>
+        <li>Night mode settings, which are saved with LocalStorage</li>
+      </ul> -->
+      <ul class="project-info-3">
+        <li>
+          Memory card game. Just turn over the cards and find the matching ones.
         </li>
       </ul>
     </div>
@@ -67,7 +87,9 @@
               </li>
               <li>
                 <i class="fas fa-file-download"></i
-                ><a href="cv20210207.pdf" target="_blank">My Resume</a>
+                ><span
+                  ><a href="cv20210207.pdf" target="_blank">My Resume</a></span
+                >
               </li>
             </ul>
           </div>
@@ -153,24 +175,26 @@
                   <span class="js-tag tag">JavaScript</span>
                   <span class="oop-tag tag">OOP</span>
                 </p>
+                <div class="info">
+                  <!--  <span class="btn-info" id="project-info-1">
+                    Description...
+                  </span> -->
+                </div>
                 <div class="btn-container">
                   <button class="btn btn-code">
                     <a
-                      href="https://codepen.io/VWRoli/pen/MWjqVpg"
+                      href="https://github.com/VWRoli/guitar-practice-assistant"
                       target="_blank"
                       ><span class="view-text">View</span> Code</a
                     >
                   </button>
                   <button class="btn btn-demo">
                     <a
-                      href="https://codepen.io/VWRoli/pen/MWjqVpg"
+                      href="https://guitar-practice-assistant.netlify.app/"
                       target="_blank"
                       ><span class="view-text">View</span> Demo</a
                     >
                   </button>
-                </div>
-                <div class="info">
-                  <button class="btn-info project-info-1">Info</button>
                 </div>
               </div>
 
@@ -184,10 +208,15 @@
                   <span class="api-tag tag">Web API</span>
                   <span class="seo-tag tag">SEO</span>
                 </p>
+                <div class="info">
+                  <!--  <span class="btn-info" id="project-info-1">
+                    Description...
+                  </span> -->
+                </div>
                 <div class="btn-container">
                   <button class="btn btn-code">
                     <a
-                      href="https://github.com/VWRoli/Website-projects/tree/main/kriptosuli"
+                      href="https://github.com/VWRoli/kriptosuli"
                       target="_blank"
                       ><span class="view-text">View</span> Code</a
                     >
@@ -198,7 +227,6 @@
                     >
                   </button>
                 </div>
-                <div class="info"><button class="btn-info">Info</button></div>
               </div>
 
               <div class="card">
@@ -209,6 +237,12 @@
                   <span class="css-tag tag">CSS</span>
                   <span class="js-tag tag">JavaScript</span>
                 </p>
+
+                <div class="info">
+                  <!--  <span class="btn-info" id="project-info-1">
+                    Description...
+                  </span> -->
+                </div>
                 <div class="btn-container">
                   <button class="btn btn-code">
                     <a
@@ -225,7 +259,6 @@
                     >
                   </button>
                 </div>
-                <div class="info"><button class="btn-info">Info</button></div>
               </div>
             </div>
           </section>

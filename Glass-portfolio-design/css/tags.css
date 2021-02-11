@@ -1,0 +1,223 @@
+/*? TAGS */
+.tag {
+  padding: 0.2rem 0.4rem;
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  opacity: 0.9;
+  cursor: default;
+}
+.html-tag {
+  background: linear-gradient(
+    to bottom right,
+    #e34c26 0%,
+    #e34c26 35%,
+    #f7bea5 50%,
+    #f06529 65%,
+    #f06529 100%
+  );
+}
+.html-tag:hover {
+  background: linear-gradient(
+    to bottom right,
+    #e34c26 0%,
+    #e34c26 35%,
+    #f06529 50%,
+    #f7bea5 65%,
+    #f06529 100%
+  );
+}
+.css-tag {
+  background: linear-gradient(
+    to bottom right,
+    #264de4 0%,
+    #264de4 35%,
+    #9fbbfd 50%,
+    #2965f1 65%,
+    #2965f1 100%
+  );
+}
+.css-tag:hover {
+  background: linear-gradient(
+    to bottom right,
+    #264de4 0%,
+    #264de4 35%,
+    #2965f1 50%,
+    #9fbbfd 65%,
+    #2965f1 100%
+  );
+}
+.js-tag {
+  background: linear-gradient(
+    to bottom right,
+    #f0db4f 0%,
+    #f0db4f 35%,
+    white 50%,
+    #f0db4f 65%,
+    #f0db4f 100%
+  );
+  color: #000;
+}
+.js-tag:hover {
+  background: linear-gradient(
+    to bottom right,
+    #f0db4f 0%,
+    #f0db4f 35%,
+    #f0db4f 50%,
+    white 65%,
+    #f0db4f 100%
+  );
+}
+.api-tag {
+  background: linear-gradient(
+    to bottom right,
+    #45c541 0%,
+    #45c541 35%,
+    #c4f8c2 50%,
+    #45c541 65%,
+    #45c541 100%
+  );
+  color: #000;
+}
+.api-tag:hover {
+  background: linear-gradient(
+    to bottom right,
+    #45c541 0%,
+    #45c541 35%,
+    #45c541 50%,
+    #c4f8c2 65%,
+    #45c541 100%
+  );
+}
+.bootstrap-tag {
+  background: linear-gradient(
+    to bottom right,
+    #7952b3 0%,
+    #7952b3 35%,
+    #dac8f5 50%,
+    #7952b3 65%,
+    #7952b3 100%
+  );
+  color: #fff;
+}
+.bootstrap-tag:hover {
+  background: linear-gradient(
+    to bottom right,
+    #7952b3 0%,
+    #7952b3 35%,
+    #7952b3 50%,
+    #dac8f5 65%,
+    #7952b3 100%
+  );
+}
+.react-tag {
+  background: linear-gradient(
+    to bottom right,
+    #282c34 0%,
+    #282c34 35%,
+    #96999e 50%,
+    #282c34 65%,
+    #282c34 100%
+  );
+  color: #61dafb;
+  border: 1px solid #61dafb;
+}
+.react-tag:hover {
+  background: linear-gradient(
+    to bottom right,
+    #282c34 0%,
+    #282c34 35%,
+    #282c34 50%,
+    #96999e 65%,
+    #282c34 100%
+  );
+}
+.git-tag {
+  background: linear-gradient(
+    to bottom right,
+    #24292e 0%,
+    #24292e 35%,
+    #a6acb3 50%,
+    #24292e 65%,
+    #24292e 100%
+  );
+  color: #fff;
+  border: 1px solid #fff;
+}
+.git-tag:hover {
+  background: linear-gradient(
+    to bottom right,
+    #24292e 0%,
+    #24292e 35%,
+    #24292e 50%,
+    #a6acb3 65%,
+    #24292e 100%
+  );
+}
+.responsive-tag {
+  background: linear-gradient(
+    to bottom right,
+    #f75b5c 0%,
+    #f75b5c 35%,
+    #f8c8c8 50%,
+    #f75b5c 65%,
+    #f75b5c 100%
+  );
+  border: 1px solid #fff;
+}
+.responsive-tag:hover {
+  background: linear-gradient(
+    to bottom right,
+    #f75b5c 0%,
+    #f75b5c 35%,
+    #f75b5c 50%,
+    #f8c8c8 65%,
+    #f75b5c 100%
+  );
+}
+
+.seo-tag {
+  background: linear-gradient(
+    to bottom right,
+    #317bb4 0%,
+    #317bb4 35%,
+    #afd0e7 50%,
+    #317bb4 65%,
+    #317bb4 100%
+  );
+  border: 1px solid #fff;
+}
+.seo-tag:hover {
+  background: linear-gradient(
+    to bottom right,
+    #317bb4 0%,
+    #317bb4 35%,
+    #317bb4 50%,
+    #afd0e7 65%,
+    #317bb4 100%
+  );
+}
+.oop-tag {
+  background: linear-gradient(
+    to bottom right,
+    #f7ed5b 0%,
+    #f7ed5b 35%,
+    #fcf9d9 50%,
+    #f7ed5b 65%,
+    #f7ed5b 100%
+  );
+  border: 1px solid #000;
+  color: #000;
+}
+.oop-tag:hover {
+  background: linear-gradient(
+    to bottom right,
+    #f7ed5b 0%,
+    #f7ed5b 35%,
+    #f7ed5b 50%,
+    #fcf9d9 65%,
+    #f7ed5b 100%
+  );
+}
