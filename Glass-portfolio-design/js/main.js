@@ -15,6 +15,13 @@ const menuBtn = document.querySelectorAll('.menu-btn');
 const themeBtns = document.querySelector('#theme-options-wrapper');
 const themeStyle = document.querySelector('#theme-style');
 
+const descriptionBtn = document.querySelectorAll('.btn-description');
+const modalWrapper = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
+const closeModalBtn = document.querySelector('.close-modal');
+
+const projectModalAll = document.querySelectorAll('.project-description');
+
 //Change theme
 //get from localstorage
 let theme = localStorage.getItem('theme');
@@ -70,4 +77,35 @@ menuElAll.addEventListener('click', function (e) {
   slider(clicked);
 });
 
-//Info/ Description buttons
+// Description buttons
+//Event listeners
+descriptionBtn.forEach((btn) => btn.addEventListener('click', openModal));
+//Close modal with Esc
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && !modalWrapper.classList.contains('hidden'))
+    closeModal();
+});
+//Close modal with X button
+closeModalBtn.addEventListener('click', closeModal);
+
+//Close modal with click on overlay
+overlay.addEventListener('click', closeModal);
+
+//Open modal
+function openModal(e) {
+  const clicked = e.target.id;
+  const selectedModal = document.querySelector(`.${clicked}`);
+  //Hide all modals
+  projectModalAll.forEach((modal) => modal.classList.add('hidden'));
+  //Show selected modal
+  selectedModal.classList.toggle('hidden');
+  modalWrapper.classList.toggle('hidden');
+  //Show overlay
+  overlay.classList.toggle('hidden');
+}
+
+//Close modal
+function closeModal() {
+  modalWrapper.classList.toggle('hidden');
+  overlay.classList.toggle('hidden');
+}

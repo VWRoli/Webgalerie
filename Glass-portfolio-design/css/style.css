@@ -353,12 +353,13 @@ a {
   grid-row-start: 2;
   grid-row-end: 3;
 }
-.info {
+.description {
   grid-column-start: 2;
   grid-column-end: 5;
   grid-row-start: 3;
   grid-row-end: 4;
   display: grid;
+  align-items: center;
 }
 .btn-container {
   height: 99px;
@@ -406,13 +407,15 @@ a {
   text-decoration: none;
   color: var(--mainTextColor);
 }
-.btn-info {
+.btn-description {
   color: var(--secondaryText);
   font-size: 1rem;
   font-weight: 500;
+  height: fit-content;
+  width: fit-content;
   cursor: pointer;
 }
-.btn-info:hover {
+.btn-description:hover {
   opacity: 0.6;
 }
 
@@ -549,6 +552,9 @@ a {
     grid-row-start: 3;
     grid-row-end: 4;
     display: flex;
+  }
+  .description {
+    display: none;
   }
 }
 @media (max-width: 580px) {
