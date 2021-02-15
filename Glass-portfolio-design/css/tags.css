@@ -221,3 +221,68 @@
     #f7ed5b 100%
   );
 }
+.npm-tag {
+  background: linear-gradient(
+    to bottom right,
+    #c12127 0%,
+    #c12127 35%,
+    #d69496 50%,
+    #c12127 65%,
+    #c12127 100%
+  );
+  color: #fff;
+}
+.npm-tag:hover {
+  background: linear-gradient(
+    to bottom right,
+    #c12127 0%,
+    #c12127 35%,
+    #c12127 50%,
+    #d69496 65%,
+    #c12127 100%
+  );
+}
+
+.parcel-tag {
+  background: linear-gradient(
+    to bottom right,
+    #21374b 0%,
+    #21374b 35%,
+    #8d9faf 50%,
+    #21374b 65%,
+    #21374b 100%
+  );
+  color: #fff;
+}
+.parcel-tag:hover {
+  background: linear-gradient(
+    to bottom right,
+    #21374b 0%,
+    #21374b 35%,
+    #21374b 50%,
+    #8d9faf 65%,
+    #21374b 100%
+  );
+}
+
+.sass-tag {
+  background: linear-gradient(
+    to bottom right,
+    #bf4080 0%,
+    #bf4080 35%,
+    #c494ac 50%,
+    #bf4080 65%,
+    #bf4080 100%
+  );
+  color: #fff;
+}
+.sass-tag:hover {
+  background: linear-gradient(
+    to bottom right,
+    #bf4080 0%,
+    #bf4080 35%,
+    #bf4080 50%,
+    #c494ac 65%,
+    #bf4080 100%
+  );
+}
