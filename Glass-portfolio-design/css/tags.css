@@ -156,27 +156,6 @@
     #24292e 100%
   );
 }
-.responsive-tag {
-  background: linear-gradient(
-    to bottom right,
-    #f75b5c 0%,
-    #f75b5c 35%,
-    #f8c8c8 50%,
-    #f75b5c 65%,
-    #f75b5c 100%
-  );
-  border: 1px solid #fff;
-}
-.responsive-tag:hover {
-  background: linear-gradient(
-    to bottom right,
-    #f75b5c 0%,
-    #f75b5c 35%,
-    #f75b5c 50%,
-    #f8c8c8 65%,
-    #f75b5c 100%
-  );
-}
 
 .seo-tag {
   background: linear-gradient(
